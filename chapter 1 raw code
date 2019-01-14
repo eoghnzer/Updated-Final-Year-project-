@@ -1,0 +1,491 @@
+\chapter{Introduction and Background}
+
+
+
+
+\section{Elements of General Relativity}
+
+
+
+\subsection{Gravity as Geometry}
+
+The General Theory of Relativity, published by Albert Einstein in 1915 following ten years of work has been described as the most beautiful theory in modern physics, and that is a school of thought in which I wholeheartedly belong. The fundamental thought of GR can be expressed through Einstein's \textit{equivalence principle} : 
+
+\vspace{2mm}
+
+\textit{Uniform acceleration is indistinguishable from a uniform gravitational field} \vspace{2mm}
+
+This was derived from the Einsteins thought that "if a person falls freely they will not feel their own weight", which can be more quantitively expressed by imagining a particle moving in a gravitational field with equation of motion $\ddot{\vec{x}} = \Vec{g}(\vec{x}(t),t)$ and reference frame moving with acceleration $\vec{a}$. In this frame the equations of motion are 
+
+
+
+
+
+\[\vec{g'} = \vec{g}-\vec{a}\]
+
+
+
+
+Now if we take this frame to have acceleration $\vec{g}$ then the particle feels no gravitational field. 
+
+From this simple beginning, we can immediately see two consequences : that light will be bent in a gravitational field, and can undergo redshift. That is, the wavelength of a photon moving in gravitational field will be elongated when the photon has a vertical trajectory, in the same way that redshift would occur with a particle in a frame which is accelerating. From this we can can also see that time dilation must also follow, that time flows slower in a gravitational field. It has postulated many other phenomena, such as black holes and gravitational waves, both of which dominate current research in physics.  
+
+
+\subsection{Curved Spacetime and Geodesics}
+
+In Einsteins GR, spacetime is not flat, as in Newtonian Gravity, but curved. It should be noted that Newtonian space is encoded in curved space and can be seen by considering appropriate limits, which will be shown later. 
+Under GR, we have to radically alter the notion of a $\textit{metric}$. In GR, a metric is defined as 
+
+\[ds^2 = g_{\mu \nu} d \X^{\mu} d \X^{\nu} \] 
+
+where \(g_{\mu \nu} = g_{\mu \nu} (\vec{x},t) \) and Einstein summation has been used, and will be used for the remainder of the text.
+
+
+In curved space time, the shortest distance between two points is not a line, but is a $\textit{geodesic}$. More formally, a geodesic (for massive particle) is the timelike curve \( \X ^ {\mu} (\tau) \) which extremises the proper time \(\Delta \tau \) between two points (It is incorrect to simply assume it minimises the proper time, as in many cases in flat spacetime, as proper time is maximised for geodesics as can be seen in the Twin Paradox). To derive the equations of motion for a geodesic, we begin with  a time like curve \(C\) between points \(p_0\) and \(p_1\) with \(C(p_0)=0\) and \(C(p_1)=1\). Let \(\lambda\) be a parameter that describes points on the line so we can write the proper time as : 
+
+\[\Delta \tau = \int_{0}^{1} d \lambda \sqrt{g_{\mu \nu} \frac{d \X ^ {\mu}}{d \lambda} \frac{d \X ^{\nu}}{d \lambda}}\]
+
+
+
+
+
+
+
+which we can rewrite as 
+
+
+\[ \Delta \tau = \int_{0}^{1} d \lambda (\Dot{\X ^{\mu}} \Dot{\X^{\nu}})^{1/2} = \int_{0}^{1} L(X^{\mu} , \Dot{X^{\mu}}) d \lambda \] 
+
+where \(\X = \frac{d \X^{\mu}}{d \lambda} \).
+Using the Lagrangian Equations of Motion :
+\[ \frac{d}{d \lambda} (\frac{\partial L}{\partial \Dot{X^{\mu}}}) - \frac{\partial L}{\partial X^{\mu}} = 0 \]
+
+We find 
+
+\[ \frac{\partial L}{\partial \Dot{X^{\mu}}} = - \frac{1}{L} g_{\mu \nu} X^{\nu}, \hspace{3mm} \frac{\partial L}{\partial X^{\mu}} = -\frac{1}{2L} \partial_{\mu} g_{\nu \rho} \Dot{X^{\nu}} \Dot{X^{\rho}} \]
+
+
+We now change parameters to \(\tau\) and noticing that : 
+\begin{equation}
+     (\frac{d \tau}{d \lambda})^2 = L^2 
+\end{equation}
+ 
+ and \begin{equation}
+     \frac{d}{d \lambda} = L \frac{d}{d \tau}
+ \end{equation}
+ we can rewrite the equation of motion as 
+ 
+ \begin{equation}
+     \frac{d}{d \tau} (g_{\mu \nu} \frac{d X^{\nu}}{d \tau}) - \frac{1}{2} \partial_{\mu} g_{\nu \gamma} \frac{d X^{\nu}}{d \tau} \frac{d X^{\gamma}}{d \tau} = 0
+ \end{equation}
+ 
+We now use the fact that \( \frac{d}{d \tau} = \frac{d}{d X^{\gamma}} \frac{d X^{\gamma}}{d \tau} \) and \( \partial_{\gamma} g_{\mu \nu} = \frac{1}{2} (\partial g_{\mu \nu} + \partial_{\nu} g_{\mu \gamma}) \), and expand the first bracket to write $(1.3)$ as 
+
+\begin{equation}
+    \frac{d^2 X^{\mu}}{d \tau^2} + \frac{1}{2} g^{\mu \lambda} ( \partial_{\nu} g_{\lambda \gamma} + \partial_{\gamma} g_{\lambda \nu} - \partial_{\lambda} g_{\nu \gamma} ) \frac{d X^{\nu}}{d \tau} \frac{d X^{\gamma}}{d \tau}  = 0
+\end{equation}
+ where \[ \frac{1}{2} g^{\mu \lambda} ( \partial_{\nu} g_{\lambda \gamma} + \partial_{\gamma} g_{\lambda \nu} - \partial_{\lambda} g_{\nu \gamma} ) = \Gamma^{\mu} {}_{\nu \gamma}\] are the Christoffel symbols.
+
+Now let us consider the Newtonian Limit and see whether we can rederive Newtonian gravity by taking relevant limits. Consider a massive particle that is moving very slowly, that is 
+\begin{equation}
+    \frac{d x^i}{dt} << 1 \Rightarrow \frac{d x^i}{d\tau} << \frac{dt}{d \tau}
+\end{equation}
+
+Using (1.5) we can simplify the geodesic equation and see that the lower two indices in the Christoffel symbols must be zero : \begin{equation}
+    \frac{d^2 x^i}{d \tau^2} = - \Gamma^i_{00} (\frac{dt}{d\tau})^2
+\end{equation}
+
+Now the Christoffel symbols can be computed as 
+\begin{equation}
+    \Gamma^i {}_{00} = \frac{1}{2}g^{i \gamma} (\partial_0 g_{0 \gamma} + \partial_0 g_{\gamma 0} - \partial_{\gamma} g_{00})
+\end{equation}
+where the first two terms are zero as we are considering a static metric. The remaining indices must be spatial so we get \begin{equation}
+    \frac{d^2 x^i}{d \tau^2} = -\partial^i \phi (\frac{dt}{d\tau})^2
+ \end{equation}   
+    
+\begin{equation}
+    \Rightarrow \frac{d^2 x^i}{dt^2} = - \partial^i \phi
+\end{equation}
+
+which, if we associate with $\phi$ the gravitional potential, gives us Newtons Law, $F = ma$
+
+Furhtermore, if one uses the $\textit{Covariant Derivative}$ we can rewrite the Geodesic equation more elegantly \begin{equation}
+    U^{\alpha} \nabla_{\alpha} U^{\mu} =0
+\end{equation}
+
+
+
+
+and using \(p^{\mu} = mU^{\mu}\) as the 4 momentum can be further written : 
+
+\begin{equation}
+    P^{\alpha} \nabla_{\alpha} P^{\mu} = 0 
+\end{equation}
+
+\subsection{Einstein Equation}
+
+In newtonian gravity, the tidal tensor plays an important role as it determines the forces that pulls particles apart or brings them together. Since in GR, for a solitary particle we can always have a frame that falls freely so that the particle is at rest, to investigate the curvature we need to investigate the motion of two particles. This brings us to the topic of the $\textit{Tidal Tensor}$. In Newtonian gravity, the tidal tensor is given by \[ \frac{\partial^2 \phi}{\partial x^i \partial x^j} \]
+where \(\phi\) is the gravitational potential. 
+
+The trace of the tidal tensor gives Poissons equation, which describes the distribution of a potential in terms of a density distribution. In order to investigate how spacetime curvature is affected by matter and energy distribution therefore, we need to find the equivalent GR equation.
+
+By (baumann refrence) it is shown that the tidal tensor in GR is given by the \(\textit{Riemann Tensor} \) which is given by \[ R^{\alpha} {}_{\beta \gamma \delta} = \partial_{\gamma} \Gamma^{\alpha} {}_{\beta \delta} - \partial_{\delta}\Gamma^{\alpha} {}_{\beta \gamma} + \Gamma^{\alpha} {}_{\gamma \epsilon} \Gamma^{\epsilon} {}_{\beta \delta} - \Gamma^{\alpha} {}_{\epsilon \delta} \Gamma^{\epsilon} {}_{\beta \gamma} \]
+
+and so taking the trace of the the Riemann Tensor, which gives us the the \(\textit{Ricci Tensor} \) gives us the GR equivalent of poissons equation : \[R_{\mu \nu} = 0\]
+
+
+We seek an equation that equates a measure of spacetime curvature and a measure of mass-energy distribution. This measure of mass energy distribution is given by the familiar energy momentum tensor \( T_{\mu \nu}\) and is conserved in flat space, that is \[\partial_{\mu} T^{\mu \nu} = 0 \]
+Now there is a slight alteration to this in the fact that the partial derivative \(\partial_{\mu} \) does not transform covariantly under general transformations. Instead we define that the above relation is true under the action of a covariant derivative \(\nabla_{\mu} A^{\nu} = \partial_{\mu} A^{\nu} + \Gamma^{\nu} {}_{\mu \alpha} A^{\alpha} \) so that the correct formula is \[\nabla_{\mu} T^{\mu} {}_{\nu} = 0 \]
+
+Therefore the Einstein equation should be a relation between \(R_{\mu \nu}\) and \( T_{\mu \nu} \) such that it satisfies \(\nabla_{\mu} T^{\mu} {}_{\nu} = 0\). The correct form is 
+\begin{equation}
+    G_{\mu \nu} = 8\pi G T_{\mu \nu}
+\end{equation}
+
+where \(G_{\mu \nu} = R_{\mu \nu} - \frac{1}{2}g_{\mu \nu} R \)
+and $R$ is the Ricci Tensor with the factor of $-\frac{1}{2}$ determined by ensuring it satisfies the bianchi identity.
+
+\section{Elements of Cosmology}
+
+\subsection{FRW Metric}
+
+
+If we view the universe as a whole, we see that the mass distribution is largely (to parts \(\simeq 10^{-5}\) ) homogeneous and isotropic. That is, there is a symmetry in both translations and rotations, the curvature is roughly the same at all points, and for an observer centred at any point looks the same in all directions. We can use these facts to derive the metric of our universe, known as the $\textit{Friedmann Robertson Walker }$ metric. In general a metric in curved spacetime is a function of both space and time, and the spacetime line element is defined to be 
+
+
+\[ds^2 = g_{\mu \nu} dX^{\mu}dX^{\nu} \] where $X^i = (t,x^i)$ are the observer dependent spacetime coordinates. In essence we see that the metric turns coordinate distances in to physical distances. We can simplify the 4 dimensional line element by using the homogeneity and isotropy of space to model the universe as composed of a series of time ordered spatial slices (each of which is homogeneous and isotropic). This allows to write the 4 dimensional line element as 
+
+\begin{equation}
+    ds^2 = dt^2 - a^2(t)dl^2
+\end{equation}
+
+where \(dl^2 = \gamma_{ij} dx^i dx^j \) is the line element of the maximally symmetric 3 space and $a(t)$ is the scale factor that describes the expansion of the universe.
+
+3 spaces have constant curvature so the spatial part of our metric has 3 different possibilities : positive ($S^3$), negative ($H^3$) and flat ($E^3$). Let us derive the form of the metric for positive curvature.
+
+A 3 space with positive curvature can be viewed as a 3 sphere ($S^3$) embedded in 4 dimensional Euclidean space ($E^4$). This allows us to write 
+
+\begin{equation}
+    {\vec{x}}^2 + u^2 = a^2 \hspace{2mm} 
+    \text{and} \hspace{2mm} d{\vec{x}}^2 +du^2 = dl^2
+\end{equation}
+
+If we introduce a rescaling $\vec{x}\rightarrow ax
+\vec{x}$ and $u\rightarrow au$ and note that from (1.12)
+\begin{eqnarray*}
+\ \vec{x} \cdot d\vec{x} & = & -udu \\
+\ (\frac{\vec{x}\cdot d\vec{x}}{u})^2 &= du^2.
+\end{eqnarray*}
+
+so we can rewrite (1.12) 
+\begin{eqnarray*}
+\ \vec{x}^2 + u^2 & &= 1 \\
+\ \Rightarrow a^2(d\vec{x}^2 + du^2) &= & dl^2 \\
+\ \Rightarrow a^2(d\vec{x}^2 + \frac{\vec{x}^2 \cdot d\vec{x}^2}{1-x^2}) &= & dl^2 .
+\end{eqnarray*}
+
+We can switch seamlessly to spherical coordinates, and to include all 3 possibilities in one equation we introduce $k$ which takes values, -1,0,1 for negative, flat and positive curvature. The final line element can thus be written as 
+\begin{equation}
+    dl^2 = a^2(\frac{dr^2}{1-kr^2}) + r^2d{\Omega}^2
+\end{equation}
+
+Substituting this in to (1.11) we get the final $\textit{Friedmann Robertson Walker }$ metric 
+\begin{equation}
+    ds^2 = dt^2 - a^2(t)(\frac{dr^2}{1-kr^2} + r^2d{\Omega}^2)
+\end{equation}
+
+\subsection{Geodesic Equation in the FRW metric}
+Let us now apply the FRW metric so as to find the geodesic equations of motion. Firstly we must find the relevant Christoffel Symbols. All Cristoffel Symbols with two time indices vanish as can be seen 
+
+\begin{equation}
+    \Gamma^{\mu} {}_{00}  =  \frac{1}{2}g^{\mu \lambda} (\partial_{0} g_{0\lambda} + \partial_{0} g_{\lambda 0} - \partial_{\lambda} g_{00})
+\end{equation}
+Since then $\mu = i $ we can see that 
+
+\begin{equation}
+    \Gamma^{i} {}_{00} = 0
+\end{equation}
+
+This means we can decompose the Christoffel Symbols in to its non zero components : \(\Gamma^{0} {}_{ij}\), \(\Gamma^i {}_{0j}\), \( \Gamma^{i} {}_{jk}\). We now present a short derivation of $\Gamma^{i} {}_{0j}$ with a derivation for $\Gamma^{0} {}_{ij}$ being found (insert baumann reference).
+
+\begin{equation}
+    \Gamma^{i}_{0j} = \frac{1}{2}g^{i \lambda}(\partial_{0}g_{j\lambda} + \partial_{j}g_{0 \lambda } - \partial_{\lambda}g_{0j})
+\end{equation}
+The last two terms are zero, recalling that the FRW metric is disagonal and that the $00$ term is a constant(for k=0). 
+Relabelling indices gives us 
+\begin{eqnarray*}
+    \ \Gamma^{i}_{0j} &= \frac{1}{2} g^{ij} \partial_{0} g_{ij} \\
+    \ \Gamma^{i}_{0j} &= \frac{1}{2} \frac{1}{a^2} \gamma^{ij} \gamma_{ij} \partial_{0} a^2 \\
+\end{eqnarray*}
+which gives us 
+\begin{equation}
+    \Gamma^{i}_{0j} & = & \frac{\Dot{a}}{a} \delta^{i}_{j}
+\end{equation}
+
+Where we have used that the spatial part of the metric is independent of time and the contraction of the same tensor gives the kroenecker delta. 
+
+Let us now use this knowledge to see what further information we can gain from the Geodesic equation. Using that $\partial_{i} P^{\mu} = 0$ by spatial homogeniety, and our non vanishing Christoffel components, equation (1.12) becomes :
+
+\begin{equation}
+    P^{0} \frac{d P^{\mu}}{dt} = -(2\Gamma^{\mu}_{0j} P^{0} + \Gamma^{\mu}_{ij}P^{i})P^{j}
+\end{equation}
+
+Now taking the $\mu = 0$ component the first term on the rhs vanishes and we are left with 
+\begin{align*}
+\ P^{0} \frac{dP^{0}}{dt} &= -(\Gamma^{0}_{ij} P^{i}P^{j}) \\
+\ P^{0} \frac{dP^{0}}{dt} &=  a \Dot{a} \gamma_{ij} P^{i}P^{j} .
+\end{align*}
+
+Noting that $PdP = EdE$ from $E^2 - p^2 = m^2$ and that $-a^2 \gamma_{ij} = g_{ij}$  this becomes 
+\begin{equation}
+    E \frac{dE}{dt} = -\frac{\Dot{a}}{a} p^2
+\end{equation}
+
+For a massless particle for which $E = p$ this can be rewritten to be 
+\begin{equation}
+    \frac{\Dot{p}}{p} = -\frac{\Dot{a}}{a}
+\end{equation}
+
+so we find that for a massless particle 
+\begin{equation}
+    p \propto \frac{1}{a}
+\end{equation}
+
+This shows that the momentum or energy of a massless particle, e.g. a photon decays with the expansion of the universe.
+These calculations explain the movement of a particle in curved spacetime, but not the factors which give rise to this curvature. To explain these, we must examine the Eistein equation :
+\begin{equation}
+    G_{\mu \nu} = 8\pi G T_{\mu \nu}
+\end{equation}
+
+where \(G_{\mu \nu}\) is the \(\textit{Einstein Tensor}\), $G$ is the gravitational constant, and $T_{\mu \nu}$ is the \textit{Energy Momentum Tensor}. The first question we must ask is of what form will $T_{\mu \nu}$ take in a FRW spacetime?
+
+\subsection{Energy Momentum Tensor}
+
+We first decompose $T_{\mu \nu}$ into a 3 scalar $T_{00}$, 3 vectors $T_{0j}$, $T_{i0}$ and a 3 tensor $T_{ij}$. Again, we use the homogeneity of our spacetime to see that the mean value of the 3 scalar $T_{00}$ cannot depend on space, so is a function of time only. Further to this, using the isotropy of spacetime, we see that the mean values of 3 vectors $T_{0j}$, $T_{i0}$ must be zero as for every vector, there is a vector with the same magnitude but in an opposite direction. Finally, for the 3 tensor $T_{ij}$ component centered around a point \(\vec{x} = 0 \), we see that for isotropy to be satisfied, there must be no mixed components, that is it must be diagonal, or $T_{ij} \propto \delta_{ij}$. By homogeneity of space, the constant of proportionality must be a function of time only and since we can have a transformation that preserves the form of $g_{ij}$ while take the origin to any point (since it is a transformation of tensors), the above expressions are true for any points in space. In accordance with the convenction of flat spacetime, we denote $T_{00} = \rho (t)$, the energy density, $T_{i0} = \pi_{i} = 0$ the momentum density, and $T_{ij} = - P(t) g_{ij}(t, \vec{x})$.
+
+
+The general form of $T_{\mu \nu}$ can be found in many resources, I will quote the general result from the notes of Daniel Baumann again ; 
+\begin{equation}
+T^{\mu} {}_{\nu} = (P + \rho)u_{\mu}u_{\nu} - P\delta^{\mu} {}_{\nu} \end{equation}
+
+Since the flat spacetime equivalent of this is conserved, $\partial_{\mu} T^{\mu} {}_{\nu} = 0$ we can see that using a covariant derivative this also holds in curved spacetime 
+\begin{equation}
+    \nabla_{\mu} T^{\mu} {}_{\nu} = 0
+\end{equation}
+
+
+\subsection{Continuity equation and applications}
+
+We can derive the continuity equation from taking the $\nu = 0$ component of the conservation law above (as in baumann), or alternatively consider $dU = -PdV $ where $U = \rho V$ and $V \propto a^3$.
+
+Now taking the differential of $U = \rho V$ gives 
+\begin{align*}
+ dU &=  \rho dV + Vd\rho \\
+ dU &=  c \rho 3 a^2 \dot{a} dt + ca^3 \dot{\rho} dt \\
+    &=  -PdV \\
+    &=  -3 P a^2 \dot{a} c \rho dt \\
+\end{align*}
+where we have written $V = ca^3$ and $da = \dot{a}dt$. Eliminating \(dt\) and $c$ and rearranging this gives the continuity equation :
+\begin{equation}
+    \dot{\rho} = 3 \frac{\dot{a}}{a} (\rho + P)
+\end{equation}
+
+
+We can use this equation to investigate how various elements of matter scale with the universe. Take ordinary matter, that is, matter for which the pressure is much smaller than its energy density. In this case we neglect P, and solving for $\rho$ gives 
+
+\begin{equation}
+    \rho_m \propto a^{-3}
+\end{equation}
+
+This includes all forms of dark matter and baryons and says that it scales with the volume of the universe $V \propto a^{-3}$. 
+
+Now take radiaton. This can be thought as anything with $P = \frac{1}{3} \rho$ where again $P$ is the pressure and $\rho$ is the energy density. This is the case for relativistic particles so is more indicative of life in the early universe. Inserting this in to equation (1.24) gives 
+
+\begin{equation}
+    \rho_r \propto a^{-4}
+\end{equation}
+
+we see there is an extra factor of a, given by the energy $E \propto a^{-1}$. This will govern the case of photons, neutrinos (for most of the universe) and gravitons. 
+
+A final component is that of Dark Energy, which seems to dominate the universe and has $P = - \rho$. This gives 
+\begin{equation}
+    \rho_{\Lambda} \propto a^{0}
+\end{equation}
+
+That is, the energy density is constant, so as the universe expands, energy needs to be created. 
+
+
+\subsection{Friedmann Equations}
+
+Lets take the (00) component of Einsteins equation. We first need the (00) component of the Ricci Tensor. The components of the Ricci Tensor are given by 
+
+\begin{equation}
+    R_{\mu \nu} = \partial_{\lambda} \Gamma^{\lambda} {}_{\mu \nu} - \partial_{\nu}\Gamma^{\lambda} {}_{ \mu \lambda} + \Gamma^{\lambda} {}_{\lambda \rho} \Gamma^{\rho} {}_{\mu \nu} - \Gamma^{\rho} {}_{\mu \lambda} \Gamma^{\lambda} {}_{\nu \rho}
+\end{equation} 
+and so taking the (00) components gives 
+\begin{equation}
+    R_{00} = \partial_{\lambda} \Gamma^{\lambda} {}_{00} - \partial_{0}\Gamma^{\lambda} {}_{ 0 \lambda} + \Gamma^{\lambda} {}_{\lambda \rho} \Gamma^{\rho} {}_{00} - \Gamma^{\rho} {}_{0 \lambda} \Gamma^{\lambda} {}_{0 \rho}
+\end{equation} 
+The first and third components are zero due to (1.18). Using (1.20) 
+\begin{align*}
+R_{00} &= -\frac{d}{dt}(\frac{\dot{a}}{a}) \delta^{i} {}_{j} - (\frac{\dot{a}}{a})^2 \delta^{i} {}_{i} \\
+ R_{00} &= -3(\frac{\dot{a}}{a})
+\end{align*}
+
+The trace of the Ricci Tensor $R$, given explicitly by $R_{00} - \frac{1}{a^2}R_{ii}$ can then be used (reference baumann) to calculate explicit values for the Einstein Tensor, which we give in time and space components below 
+\begin{equation}
+    G^{0} |{}_{0} = 3((\frac{\dot{a}}{a})^2 + \frac{k}{a^2}))
+\end{equation}
+ and 
+ \begin{equation}
+     G^{i} {}_{j} = (2\frac{\ddot{a}}{a} + (\frac{\dot{a}}{a})^2 + \frac{k}{a^2}) \delta^{i}_{j}
+ \end{equation}
+
+
+Combining these with the relevant component forms of (1.26) gives the two \textit{Friedmann Equations} : 
+
+\begin{equation}
+    H^2 = \frac{8 \pi G}{3} \rho - \frac{k}{a^2}
+\end{equation}
+
+\begin{equation}
+    \frac{\ddot{a}}{a} = \frac{4 \pi G}{3} (\rho + 3P)
+\end{equation}
+
+Using $\rho_{crit,0} = \frac{3H_{0}^2}{8 \pi G}$ we can use the standard notation of defining the dimsionless parameters $\Omega_{I,0} = \frac{\rho_{I,0}}{\rho_{crit,0}}$ to rewrite (1.36) as (setting $a_0$ to 1) 
+
+\begin{equation}
+    \frac{H^2}{H_{0} ^2} = \Omega_{r} a^{-4} + \Omega_{m} a^{-3} + \Omega_{k} a^{-2} + \Omega_{\Lambda}
+\end{equation}
+
+\subsection{Basic Solutions Of Friedmann Equations}
+The scaling factors of matter, radiation and dark matter seem to suggest that at any one time, the universe is dominated by one matter source. Rewriting the scale factor as $a^{-\frac{3}{2} (1+3w_{I})}$ where $w = \frac{1}{3}$ for radiation, $0$ for matter and $-1$ for dark matter, we can rearrange (1.38)  
+
+\begin{equation}
+    \frac{\dot{a}}{a} = H_{0} \sqrt{\Omega_{I}} a^{-\frac{3}{2} (1+3w_{I})}
+\end{equation}
+This can be solved by separation of variables to give 
+\begin{equation}
+    a \propto t^{(\frac{2}{3(1+w_{I})})}
+\end{equation}
+ for $w_{I} \neq -1$
+ and 
+ \begin{equation}
+     a \propto e^{H t}
+ \end{equation}
+for $w_{I} = -1$.
+
+
+\section{Inflation}
+
+\subsection{Uniformity of CMB radiation}
+
+Roughly 380,000 years after the Big Bang, the universe cooled sufficiently to allow the formation of the first Hydrogen Atoms. Up to this point, the Universe was composed of a Primodial Plasma, but now the photons comprising this decoupled, which can be seen as radiation in the sky. This was first measured in 1964 and is a direct afterglow of the Big Bang.
+
+Intriguingly, this radiation is almost perfectly uniform and isotropic. Nothing as discussed here previously can explain this perfect alignment. The reasons for this failure are quite simple and can be seen explicitly in (#insert light cones diagram#). The finiteness of time elapsed between the Big Bang simgularity, and the time of the CMB event, means that most parts of the CMB radiation have $\textit{non overlapping}$ light cones and so cannot said to be causally connected. This can be seen in the diagram by observing that no point lies inside the particle horizon (the particle horizon is the max comoving distance that an observer at time $t$ can receive signals travelling at the speed of light) hence they have no influence over each other so to speak. But how then do photons from different reagions of space "know" to be at the same temperature? The scale of CMB homogenity is far greater than the scale of particle horizons at the formation of CMB. This paradox is the $\textit{Horizon Problem}$ and one theory that proposes a solution to this is Inflation.
+
+
+\subsection{Principles of Inflation}
+
+To expand on the idea of a particle horizon, we can write down the mathematical definition :
+\[ \chi (\eta) = \int_{t_i}^t \frac{dt}{a(t)} = \int_{a_i}^a \frac{da}{a \dot{a}} = \int_{ln\ a_i}^{ln\ a} (aH)^{-1} d\ ln a \] 
+Where we can see that comoving distance is related to $(aH)^{-1}$ which is defined as the $\textit{Hubble Radius}$. 
+For a universe like our own dominated by a perfect fluid with equation of state $w = \frac{P}{\rho}$ we have \begin{equation}
+    (aH)^{-1} = H_{0}^{-1} a^{\frac{1}{2}(1+3w)}
+\end{equation}
+ 
+The exponent in (1.42) satisfies the \textit{Strong Energy Condition}, that is \( 1+3w > 0 \)
+This suggests that the Hubble radius is increasing as the universe evolves 
+\begin{equation}
+    \frac{d}{dt} (aH)^{-1} > 0
+\end{equation}
+as all familiar matter sources obey the SEC.
+The underlying principle of inflation however is to assume a \textit{decreasing} Hubble radius and examine the implications. 
+Under this assumption $\eta = 0$ isn't the Big Bang Singularity, it is merely a point in the transition between the inflation era and more traditional Big Bang evolution. Inflation is thus classed as having $\textit{negative}$ conformal time. 
+
+\subsection{Conditions for Inflation}
+The following conditions hold when inflation occurs : 
+
+\begin{itemise}
+\item  \textbf{Increased Acceleration}
+If we expand (1.43) using the definition of the Hubble parameter, then we get 
+\begin{equation}
+\frac{d}{dt} (\Ddot{a})^{-1} = -\frac{\ddot{a}}{a^2} < 0
+\end{equation}
+\begin{equation}
+    \Rightarrow \ddot{a} > 0.
+\end{equation}
+
+\item \textbf{Hubble Parameter} If we define the Hubble Parameter $\epsilon \equiv \frac{\dot{H}}{H^2}$ then equivalently inflation will occur so long as \begin{equation}
+    \epsilon < 1 
+\end{equation}
+holds. 
+
+\item \textbf{Quasi de Sitter Space}
+In the limit $\epsilon \rightarrow 0$ $H$ becomes a constant and since $w_I$ = -1 by the breaking of SEC then the expansion factor can be written as $a(t) = e^{Ht}$ and so the spacetime line element becomes 
+\begin{equation}
+    ds^2 = dt^2 - e^{2Ht}d\vec{x}^2
+\end{equation}
+which is simply de Sitter Space. Now inflation must end so in reality $\epsilon$ cannot be zero however the line element in (1.47) is still a good approximation for small but finite $\epsilon$ which is why inflation can be classified as occurring in $\textit{quasi de Sitter Space}$.
+\end{itemise}
+
+\subsection{Scalar Field Dynamics}
+An extremely effective model for inflation is the seemingly trivial scalar field model. In this case, we model inflation after a single scalar field $\phi( t )$ with scalar potential $V(\phi)$. The field changes with time so also has an associated kinetic energy density. The evolution of the structure of this universe can be modelled by the corresponding stress energy tensor (if stress energy associated with the scalar field dominates the universe which we assume is true) who's form is 
+\begin{equation}
+    T^{\mu} {}_{\nu} = \partial^{\mu} \phi \partial_{\nu} \phi - g^{\mu} {}_{\nu} (\frac{1}{2} g^{\alpha \beta} \partial_{\alpha} \phi \partial_{\beta} \phi - V(\phi) )
+\end{equation}
+We can obtain the pressure and energy density associated with this field by taking the spatial and time components of the stress energy tensor 
+
+\begin{equation}
+    T^0 {}_0 = \frac{\dot{\phi}^2}{2} + V(\phi) = \rho_{\phi}
+\end{equation}
+
+\begin{equation}
+    T^i {}_j = \frac{\dot{\phi}^2}{2} - V(\phi) = P_{\phi}
+\end{equation}
+
+
+So according to the previous condition for inflation $P < \frac{1}{3}\rho$ we see that in the scalar field dynamic inflation occurs when the potential dominates over the kinetic energy $V(\phi) \gg \frac{\dot{\phi}^2}{2}$. 
+
+If we now consider the first Friedmann equation and write it using the reduced Planck Mass $M_{pl} = \frac{1}{\sqrt{8\pi G}}$ (remembering that in our system $\hbar = c = 1$) so that (1.36) becomes 
+\begin{equation}
+    H^2 = \frac{\rho}{3M_{pl}^2}
+\end{equation}
+ and sub in for $\rho_{\phi}$ we get 
+ 
+\begin{equation}
+    H^2 = \frac{1}{3M_{pl}^2} (\frac{\dot{\phi}^2}{2} +V(\phi))
+\end{equation} 
+ 
+ and taking the time derivative
+ 
+ \begin{equation}
+     2H\dot{H} = \frac{1}{3M_{pl}^2}(\ddot{\phi}\dot{\phi} + V' \dot{\phi} )
+ \end{equation}
+ 
+ If we now sub in for $\rho $ and $P$ in the second Friedmann equation (1.37) and simplify we obtain the Klein Gordon Equation for the scalar field 
+ \begin{equation}
+     \ddot{\phi} + 3H\dot{\phi} + V' = 0
+ \end{equation}
+ (Note that this can be more simply derived using the suitable Lagrangian ((insert derivation in appendix?)))
+ \subsection{Approximations}
+ Recall the earlier condition of inflation, that it occurs if the \textit{Hubble Parameter} $\epsilon < 1$. This can be written in terms of the scalar field by using $\dot{H} = -\frac{\dot{\phi}^2}{2 M_{pl}^2} $ to obtain 
+ \begin{equation}
+     \epsilon = \frac{\dot{\phi}^2}{2M_{pl}^2 H^2}
+ \end{equation}
+  From $\rho = 3 M_{pl}^2 H^2$ we see that inflation occurs if the kinetic energy is small compared to the overall energy density. This is called $\textit{Slow Roll Inflation}$. This must persist if inflation is to continue occurring for a substantial period of time so we define the dimensionless acceleration per Hubble time $\delta = \frac{\ddot{{\phi}}}{H\dot{\phi}}$ and say that inflation occurs if the parameters {$\epsilon, \mid\delta\mid$} $<< 1$. 
+  To simplify the above equations a common technique used in modern research is the $\textit{Slow Roll Approximation}$ which assumes that $\dot{\phi}^2 << V$ and so can be neglected in some cases. This simplifies (1.52) to 
+  \begin{equation}
+      H^2 \approx \frac{V}{3 M_{pl}^2}
+  \end{equation}
+   and since $\mid\delta \mid << 1$ (1.54) reduces to 
+   
+  \begin{equation}
+      3H\dot{\phi} + V' \approx 0
+  \end{equation}
+  
+  Substituting these two expressions into (1.55) gives the $\textit{slow roll potential parameter} \ \epsilon_{v} = \frac{M_{pl}^2}{2} (\frac{V'}{V})^2$. The acceleration parameter is defined as $\eta_{v} = M_{pl}^2 \mid\frac{V''}{V}\mid$. So given a potential $V(\phi)$, $\textit{slow roll inflation}$ occurs if $\epsilon_{v}, \mid \eta_{v}\mid << 1 $.
+  
+  
+  
+  
