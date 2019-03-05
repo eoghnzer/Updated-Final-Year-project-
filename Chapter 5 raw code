@@ -1,0 +1,23 @@
+\chapter{Cubic Computation of Lagrangian}
+\lhead{\emph{Cubic Computation of Lagrangian}}
+We will now attempt to derive the cubic lagrnagian and compute the corresponding 3 point correlator. The computation is quite long and difficult, and we will draw heavily off the work of Maldacena in his groundbreaking 2003 paper \cite{maldacena}.
+\subsection{Evolution of $\zeta , \gamma$ to all orders}
+We first attempt to show that $\zeta$ and the corresponding tensor fluctuation $\gamma$ are constant outside the horizon, not just to first order but to all orders of fields. Looking at the hamiltonian constraints, we see that it is sufficient to expand up to first order derivatives, while we assume that $N=1+\delta N$ where $\delta N$ has an expansion in derivatives starting with first order and also that $\nabla_{j}\N^i$ is first order in derivatives. Solving the Hamiltonian constraint under these conditions gives \cite{maldacena}
+\begin{equation}
+    2V\delta N = 2\dot{\rho}(3\dot{\zeta}-\nabla_{i}\N^i)
+\end{equation}
+On a solution to the Hamiltonian constraint, the action (3.8) reduces to 
+\begin{equation}
+    -\int \sqrt{h} 2\N V = \int \sqrt{h}(-2-2\delta N)V
+\end{equation}
+where we have neglected the Ricci scalar as it is higher order in derivatives, and subbed in for the general expansion of $\N$. Subbing in (5.1) 
+\begin{align}
+    S &= -\int \sqrt{h}(-2V-6\dot{\rho}\dot{\zeta} + 2\dot{\rho}\nabla_{i}\N^i) \\  
+     &= - \int \sqrt{h}(-2V-6\dot{\rho}\dot{\zeta}) \\ 
+     &=  \int e^{3\rho+3\zeta}(-6\dot{\rho}^2 + \dot{\phi}^2 -6\dot{\zeta}\dot{\rho}) 
+\end{align}
+Where we have integrated by parts in (5.4) since $\rho = \rho(t)$ so the term can be neglected and used the background equations of motion in (5.5). But this is simply a total derivative 
+\begin{equation}
+    \int e^{3\rho+3\zeta}(-6\dot{\rho}^2 + \dot{\phi}^2 -6\dot{\zeta}\dot{\rho}) = \int d_{t}(e^{3\rho+3\zeta}\dot{\rho})
+\end{equation}
+So (5.5) is a total derivative and can be neglected. Outside the horizon we can neglect all spatial derivatives. Combining this with what we have shown, that the expansion in time derivatives begins at 2nd order, we see that constant $\zeta,\gamma$ are solutions to the equations of motion to all orders in powers of $\zeta, \gamma$ outside the horizon.
