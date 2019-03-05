@@ -80,5 +80,20 @@ We now contract this with the spatial metric $h_{ij}$ to obtain the Ricci Scalar
     &\Rightarrow R^{(3)} = e^{-2\rho -2\zeta}(-4(\partial^2 \zeta) - 2(\partial \zeta)^2 )
 \end{align}
 
+\subsection{Final Lagrangian and Two Point Correlator}
+Integrating by parts and using the background equations of motion \cite{maldacena}(?? check with manuela and denis) we obtain the final expression for the quadratic action : 
+\begin{equation}
+    S = \frac{1}{2}\int \frac{\Dot{\phi}^2}{\Dot{\rho}^2} \lbrack e^{3\rho} \Dot{\zeta}^2 -e^{\rho}(\partial \zeta)^2 \rbrack 
+\end{equation}
+The action has an overall factor of $\frac{\Dot{\phi}^2}{\Dot{\rho}^2} \simeq \epsilon$ the slow roll parameter. This occurs because in dS space, $\zeta$ would be a pure gauge mode, so only has non trivial action to the extent that $\epsilon$ is non zero.
+The euler lagrange equations of (4.14) are 
+\begin{equation}
+    \frac{d}{dt}(\frac{\Dot{\phi}^2}{\Dot{\rho}^2} e^{3\rho} \Dot{\zeta_{k}}) +\frac{\Dot{\phi}^2}{\Dot{\rho}^2}e^{\rho}k^2\zeta_{k} = 0
+\end{equation}
+If we were to calculate the classical solution to (4.15) then the two point correlator could be computed as \cite{maldacena}
+\begin{equation}
+    \langle \zeta_{\Vec{k}}(t) \zeta_{\Vec{k'}}(t)\rangle = (2\pi)^3 \delta^{3}(\Vec{k}+\Vec{k'}) |\zeta^{cl}_{k}(t)|^2
+\end{equation}
+
 
 
