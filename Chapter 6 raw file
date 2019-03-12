@@ -1,0 +1,78 @@
+\chapter{Higher Order Terms in the Einstein Hilbert Action and their Implications}
+\lhead{\emph{Higher Order Terms in the Einstein Hilbert Action and their Implications}}
+
+\section{Motivation}
+Einstein's Theory of Gravitation has been one of the most successful scientific theories in recent decades, however that has not quelled attempts to upgrade and modify it to address some of its limitations. Indeed the first investigation of higher order terms in the action and their effects was done only 4 years after the publication of the paper itself by Weyl (insert reference). Recent experimental observations in cosmology suggest that the Universe is composed of $\sim 76\%$(Astier et al., 2006) $\textit{Dark Energy}$ which does not obey the Strong Energy Condition. This seems to resemble a comological constant in many ways, and its dominance of both ordinary and dark matter goes some way to explain the recent findings that the universe is now in a state of $\textit{accelerated}$ expansion. The simplest model which adequately fits this data, is the $\Lambda$CDM model, supplemented with an inflationary mechanism. However this model has given rise to the $\textit{Magnitude}$ problem of the cosmological constant, the huge difference in predicted and observed values. Higher order corrections to the action are being considered to explain these observational findings in Cosmology, while they have also been used in Holography, to study strongly coupled conformal field theories. \cite{Maldacena:1997re} \cite{Witten:1998qj}. For these higher order theories to be physical, they must be equivalent to Einstein gravity in the linearised level of the vacuum, that is there should be only 1 physical mode propagated by the metric perturbations, the massless and transverse graviton. \\
+The actions proposed by these theories should also satisfy three main criteria : i) They possess linearised second order equations around any maximally symmetric background metric, ii) they admit non hairy black hole generalisations of the Schwarzchild Black hole characterised by a single function $f(r)$ s,t, $g_{tt}g_{rr} = -1$ and whose thermodynamic properties can be investigated in an analytic manner, iii) they admits solutions of the FRW metric where the resultant equations for the scale factor $a(t)$ are second order. \\
+
+We will now investigate such theories where the corrections to the actions are composed of an infinite family of terms. The cubic case has been well studied \cite{Bueno:2016xff} as well as the non hairy black hole solutions to it \cite{Bueno:2017qce} and act as a check to which out infinite order solutions should reduce to in the limit $n=3$. As is the case in \cite{Arciniega:2018tnn} we consider an action of the form : 
+\begin{equation}
+    \int \frac{d^{4}x \sqrt{-g}}{16 \pi G} \{ 2\Lambda + R + \sum_{n=3}^{\infty} \lambda_{n} L^{2n-2} \R_{(n)} \}
+\end{equation}
+where $\lambda_{n}$ are dimensionless couplings, $L^{-1}$ is some energy scale, $\R_{(n)}$ is some higher order curvature invariant and $n$ is the term in the higher order curvature invariant. $\R_{(3)}$ is quoted explicitly in \cite{Bueno:2016xff} and the explivit form of $\R_{(n)}$ up to $n = 8$ is given in \cite{Arciniega:2018tnn}. However for general $n$ we can construct the densities as follows : \\
+Consider the ansatz for the Schwarzchild metric in such coordinates : 
+\begin{equation}
+    ds^2 = -f(r)dt^2 + f(r)^{-1}dr^2 + d\Omega_{(2)}^2
+\end{equation}
+and let $L_{f}$ be the effective lagrangian resulting from evaluating $\sqrt{|g|}\mathcal{L}$ on a metric of the above form. Then we choose our $\R_{(n)}$ such that the Euler Lagrange equations of $f(r)$ associated witht this $L_f$ vanish for all $f(r)$. As shown in \cite{Bueno:2017Theorem}, any theory of the form (6.1) satisfying this condition will also allow solutions of the form (6.2) where these solutions will describe the gravitational field of a static, spherically symmetric mass distribution, i.e. Schwarzchild mass distribution and admit linearised equation on the vacuum which are equivalent to those from Einstein gravity. 
+
+\section{Friedmann Equations}
+The Friedmann equations were derived originally by equating the (00) and (ii) components of the Einstein Field equations. The method for attempting to derive the $\textit{generalised Friedmann equation}$ as used in \cite{Arciniega:2018tnn} was as follows. To ensure (ii) we impose the condition that $\frac{\delta S}{\delta f} = 0$. This ensures that there is only one independent component of the field equations and so are characterised by just $f(r)$. Citing again \cite{Arciniega:2018tnn} the two Friedmann equations now take the form : 
+\begin{align}
+    3 F(H) &= 8\pi G \rho + \Lambda \\
+    -\frac{\Dot{H}}{H}F'(H) &= 8\pi G(\rho + P)
+\end{align}
+where 
+\begin{equation}
+    F(H) = H^2 + L^{-2}\sum_{n=3}^{\infty} \lambda_n (-1)^n (LH)^{2n}
+\end{equation} and 
+where (iii) is ensured by requiring that the Lagrangian be degenerate (as the Einstein Hilbert lagrangian is degenerate also :
+\begin{equation}
+    (\frac{\partial^2 \sqrt{-g} \mathcal{L}}{\partial \Dot{N}^2})(\frac{\partial^2 \sqrt{-g} \mathcal{L}}{\partial \Ddot{a}^2}) - (\frac{\partial \mathcal{L}}{\partial \Dot{N}\partial\Ddot{a}})^2 = 0
+\end{equation}
+where the function $N(t)$ is a lagrange multiplier that we then set to unity. \\
+In reality, it seems that in addition to these guidelines, the authors of $\cite{Arciniega:2018tnn}$ derived the explicit equations for $n =3,4,5$ then used the form of these to estimate the form for general $n$, and then verified their estimate against arbritrary $n$ whcih was computed explicitly. \\
+Using that $\frac{d}{dt} = \frac{dH}{dt}\frac{d}{dH} = \Dot{H}\frac{d}{dH}$ we can take the time derivative of (6.3) : 
+\begin{equation}
+    \Dot{H}F'(H) = \frac{8\pi G \Dot{\rho}}{3}
+\end{equation}
+equating this to (6.4) we have :
+\begin{align}
+    \Dot{H}F'(H) &= \frac{8\pi G \Dot{\rho}}{3} = -8 H \pi G(\rho + P) \\ \nonumber 
+    &\Rightarrow \Dot{\rho} = -3H(\rho + P)
+\end{align}
+which is the traditional conservation equation. If we assume a universe composed solely of matter ($P_m = 0$) and radiation ($P_r = \frac{1}{3}\rho_r$) then we have : 
+\begin{align}
+    \rho &= \rho_m + \rho_r \\ \nonumber
+         &= \rho_{0m}a^{-3} + \rho_{0r}a^{-4} \\ \nonumber
+         &= \rho_c(\frac{\Omega_m}{a^3} + \frac{\Omega_r}{a^4}) \\ \nonumber
+    \rho &= \frac{3 F(H_0)}{8 \pi G}(\frac{\Omega_m}{a^3} + \frac{\Omega_r}{a^4})   
+\end{align}
+where the critical density is now defined as $\rho_c = \frac{3F(H_0)}{8\pi G}$. 
+
+\section{Closed Models}
+The fact that we have assumed an $\textit{infinite}$ tower of corrections implies an opportunity to evaluate an infinite series explicitly and come to a closed form, an altogether more useful method of simplifying the calculations. To do this, we need to examine the function $F(H)$ which is solely responsible for cosmological evolution, which itself is controlled by $\lambda_n$ and $L^{-1}$. \\
+Up to now we have assumed the gravitational couplings $\lambda_n$ to be free parameters in our Lagrangian. However there are various physical conditions we must satisfy. It is convenient to choose $F(H)$ to be bijective, so that we avoid the absence of solutions for high enough energy densities. This also avoids the appearance of singularities for points at which $F(H)$ has an extremum. As well as this for positive mass black hole solutions to exist we require the first non vanishing coupling constant to be greater than zero. This is a result in the paper of \cite{Bueno:2017qce}. In it they derive the subleading term of the asymptotic expansion of the Schwarzchild function $f(r)$ to be of the form :
+\begin{equation}
+    f_{sub}(r) \sim A \text{exp}(\frac{r^\frac{5}{2}}{C \sqrt{\lambda_3}}) + B\text{exp}(\frac{r^{-\frac{5}{2}}}{D \sqrt{\lambda_3}})
+\end{equation}
+Where $C$ and $D$ are constants whose value is not of interest, and in this case $\lambda_3$ is the first non vanishing coupling constant. 
+We need an asymptotically flat solution and for this to be the case we require $A=0$ but also that $\lambda_3 > 0$. Otherwise we would have an oscillating non decaying solution which is not necessarily flat in the asymptotic region. \\
+One way of satisfying these constraints is by setting the odd order couplings to zero (apart from $\lambda_3$ and the even ones to be greater than zero ; $\lambda_{2k+1} = 0, \hspace{2 mm} \lambda_{2k} > 0$ (In theory the odd couplings can be included if they are negative apart from $\lambda_3$ or are positive and small). Now consider one of the concrete models which satisfy these as proposed in \cite{Arciniega:2018tnn} : 
+\begin{equation}
+    \lambda_{2k+1} = 0, \hspace{3mm} \lambda_{4+2k} = \lambda_4 / k!
+\end{equation}
+Now consider and evaluate the sum in (6.5) : 
+\begin{align}
+    L^{-2}\sum_{n=3}^{\infty} \lambda_n (-1)^n (LH)^{2n} &= L^{-2}(\lambda_4 (LH)^8 + \lambda_6 (LH)^{12} + \lambda_8 (LH)^{16} + \lambda_{10} (LH)^{20} + \dots \hspace{3mm}) \\ \nonumber
+    &= L^{-2} (\lambda_4(LH)^{12} + \lambda_4(LH)^{12} + \frac{\lambda_4}{2!}(LH)^{16} + \frac{\lambda_4}{3!}(LH)^{20} + \dots \hspace{3mm}) \\ \nonumber
+    &= \lambda_4(L^6H^8 + L^{10}H^{12} + \frac{L^{14}H^{16}}{2!} + \frac{L^{18}H^{20}}{3!} + \dots \hspace{3mm}) \\ \nonumber
+    &= \lambda_4 L^6 H^8(1 + (LH)^4 + \frac{(LH)^8}{2!} +\frac{(LH)^{12}}{3!} + \dots \hspace{3mm} )
+\end{align}
+But the series inside the brackets is just the definition of the exponential function $e^{x} = \sum_{n=0}^{\infty} \frac{x^n}{n!}$
+so we get that 
+\begin{align}
+     L^{-2}\sum_{n=3}^{\infty} \lambda_n (-1)^n (LH)^{2n} &= \lambda_4 L^6 H^8 e^{(LH)^4} \\ \nonumber
+     &\Rightarrow F(H) = H^2 + \lambda_4 L^6 H^8 e^{(LH)^4}
+\end{align}
+
