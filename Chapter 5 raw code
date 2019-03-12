@@ -21,3 +21,28 @@ Where we have integrated by parts in (5.4) since $\rho = \rho(t)$ so the term ca
     \int e^{3\rho+3\zeta}(-6\dot{\rho}^2 + \dot{\phi}^2 -6\dot{\zeta}\dot{\rho}) = \int d_{t}(e^{3\rho+3\zeta}\dot{\rho})
 \end{equation}
 So (5.5) is a total derivative and can be neglected. Outside the horizon we can neglect all spatial derivatives. Combining this with what we have shown, that the expansion in time derivatives begins at 2nd order, we see that constant $\zeta,\gamma$ are solutions to the equations of motion to all orders in powers of $\zeta, \gamma$ outside the horizon.
+
+\subsection{Derivation of Cubic Lagrangian}
+We knwo attempt to expand the action up to 3rd order, and isolate an expression for the cubic Lagrangian. The exact derivation is an intricate and complicated one, and rather than attempt to describe it in detail, I will mainly quote the work of \cite{maldacena} and then attempt to explicitly compute the commutator. \\
+We work in the gauge 
+\begin{align}
+    \delta \phi &= 0 \hspace{3mm} \\ \nonumber
+    h_{ij} &= e^{2\rho + 2\zeta}\hat{h} \hspace{3mm} det \hat{h}=1 \hspace{3mm} \hat{h}= (\delta_{ij} + \gamma_{ij} + \frac{1}{2}\gamma_{il}\gamma_{lj} + \dots )
+\end{align}
+We consider the expansion of $\N$ and $\N^i$ we only have to expand up to first order. Ths is because the 3rd order terms would be multiplying the constraints evaluated at zeroth order, while the 2nd order terms would be multiplying the constraints evaluated at 1st order, which vanish by the first order constraint equations. Therefore it is necessary to only consider first order expansions of $\N$,$\N^i$. After expanding the action, and doing "a lot of integration by parts" the action becomes : 
+\begin{equation}
+    S = \int \frac{1}{4}\frac{\dot{\phi}}{\dot{\rho}} \lbrack e^{3\rho}\dot{\zeta}^2 \zeta + e^{\rho}(\partial \zeta)^2\zeta \rbrack \frac{\dot{\phi}^2}{\dot{\rho}^2}e^{3\rho}\dot{\zeta}\partial_i \chi \partial_i \zeta + \dots + f(\zeta)\frac{\delta L}{\delta \zeta} |_{1} 
+\end{equation}
+where the 3 dots terms are those terms that are higher order in slow roll and so can be neglected. The final term denotes those terms proportional to the equations of motion. This can be be removed by performing a field redefinition of the form 
+\begin{equation}
+    \zeta = \zeta_n - f(\zeta_n)
+\end{equation}
+but be aware, this redefinition will lead to extra terms in the correlator as we will see later as it is not necessarily true that $\zeta_n$ stays constant outside the horizon as $\zeta$ did, owing to particular forms of $f(\zeta_n)$. In order to compute the 3 point function, we will make a change of variables :
+\begin{equation}
+    \zeta = \zeta_c + \frac{\Ddot{\phi}}{\dot{\phi \dot{\rho}}}\zeta_{c}^2 + \frac{\dot{\phi}^2}{8\dot{\rho}^2}\zeta_{c}^2 + \frac{\dot{\phi}^2}{4\dot{\rho}^2}\partial^{-2}(\zeta_c \partial^2 \zeta_c) + \dots 
+\end{equation}
+where again the dots indicate terms that vanish outside horizon or are higher order in slow roll. This gives a final action of :
+\begin{equation}
+    S_3 = \int \frac{\dot{\phi}^4}{\dot{\rho}^4}e^{5\rho} \dot{\rho}\dot{\zeta_c}^2\partial^{-2}\dot{\zeta_c} + \dots
+\end{equation}
+
