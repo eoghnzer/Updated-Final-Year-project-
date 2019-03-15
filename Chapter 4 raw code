@@ -1,21 +1,24 @@
 \chapter{Quadratic Computation of Lagrangian}
 \lhead{\emph{Quadratic Computation of Lagrangian}}
 
-To compute the quadratic action we need to first choose a gauge for $h_{ij}$ and $\Dot{\phi}$ to fix spatial and time reparametrisations. A convenient gauge is (insert maldacena reference) 
+\subsection{Degrees Of Freedom}
+A discussion of degrees of freedom is necessary before we proceed further. Consider fluctuations of the metric $g_{\mu \nu}$. As stated previously any symmetric 4x4 tensor has 10 independent components but of these, 4 can be discarded as non physical due to gauge invariances in the 4 space time dimensions, leaving us with 6. Now, \cite{stewart} we can decompose this symmetric tensor further, in to 2 scalar, vector and tensor modes, all of which are decoupled from each other. Of these, only the scalar modes couple (via the Einstein equations) to energy density and pressure so we consider them only. Now we also have a scalar field fluctuation $\delta \phi$ which leaves us with three modes. However we also have two constraint equations which get rid of two further modes leaving us with a sole degree of freedom. 
+
+To compute the quadratic action we need to first choose a gauge for $h_{ij}$ and $\delta \phi$ to fix spatial and time reparametrisations. A convenient gauge is \cite{maldacena}
 \begin{equation}
     \delta \phi = 0, \hspace{  3mm } h_{ij} = e^{2\rho}(e^{2\zeta} \delta_{ij} + \gamma_{ij}), \hspace{ 3mm   } \partial_{i}\gamma_{ij} = 0, \hspace{ 3mm   } \gamma_{ii}=0
 \end{equation}
 This is convenient as we will use the same variable throughout our computation right up to the 2 point correlator function. The $\zeta$ parametrises the scalar fluctuation while $\gamma$ the tensor fluctuations (corresponding to gravitational waves). As in the classical electrodynamics case, we solve for $\N$ and $\N^i$ in their constraint equations and plug this back in to the action along with the relevant gauge details. 
-Upon solving (2.17) and (2.23) we obtain (maldacena reference) 
+Upon solving (3.17) and (3.23) we obtain \cite{maldacena} 
 \begin{equation}
     \N_1 = \frac{\Dot{\zeta}}{\Dot{\rho}},  \hspace{3mm} \N^i _T = 0, \hspace{3mm} \psi = -e^{-2\rho} \frac{\zeta}{\Dot{\rho}} + \chi, \hspace{3mm} \partial^2 \chi = \frac{\Dot{\phi}^2}{2 \Dot{\rho}^2} \Dot{\zeta} 
 \end{equation}
 Where we expanded $\N$ as $\N = 1 + \N_1$ and $\N^i = \partial_i \psi + \N^i _T$
-Using these, and (3.1) the quadratic lagrangian is obtained : 
+Using these, and (4.1) the quadratic lagrangian is obtained : 
 \begin{equation}
     S = \frac{1}{2}\int e^{\rho + \zeta}(1+\frac{\Dot{\zeta}}{\Dot{\rho}}) \lbrack -4(\partial^2 \zeta) -2(\partial\zeta)^2 - 2Ve^{2\rho + 2\zeta} \rbrack + e^{3\rho + 3\zeta} \frac{1}{1+\frac{\Dot{\zeta}}{\Dot{\rho}}}\lbrack \Dot{\phi}^2 -6(\Dot{\rho} + \Dot{\zeta})^2 \rbrack 
 \end{equation}
-The fourth term comes about from a straightforward substitution of the metric and $N^{-1}$ from (3.2) and the final terms is the contribution of the $\N^{-1}(E^{ij}E_{ij} - E^2)$ term. Consider the first 3 terms. Given the definition of the metric in (3.1) and $\N = 1 + \frac{\Dot{\zeta}}{\Dot{\rho}}$ the third term is immediately obtained as the potential term from (2.8). The first two come about from the $R^{(3)}$ term in (2.8). 
+The fourth term comes about from a straightforward substitution of the metric ($h = e^{3\rho+3\zeta}$) and $N^{-1}$ from (4.2) and the final terms is the contribution of the $\N^{-1}(E^{ij}E_{ij} - E^2)$ term. Consider the first 3 terms. Given the definition of the metric in (4.1) and $\N = 1 + \frac{\Dot{\zeta}}{\Dot{\rho}}$ the third term is immediately obtained as the potential term from (3.8). The first two come about from the $R^{(3)}$ term in (3.8). 
 
 \subsection{Derivation of Ricci Scalar Terms}
 The general form of the Ricci Tensor in terms of christoffel symbols is given by : 
@@ -26,7 +29,7 @@ We first need to compute the relevant connection coefficients. In our case worki
 \begin{equation}
     \Gamma^h {}_{ij} = \frac{1}{2}h^{kp}(\partial_j h_{ip} + \partial_i h_{jp} - \partial_p h_{ij})    
 \end{equation}
-Subbing in for (3.1) we have 
+Subbing in for (4.1) we have 
 \begin{align}
     \Gamma^k {}_{ij} &= \frac{1}{2}e^{-2\rho - 2\zeta} \delta^{kp}(2(\partial_j \zeta)e^{2\rho +2\zeta} \delta_{ip} + 2(\partial_i \zeta)e^{2\rho +2\zeta} \delta_{jp} -2(\partial \zeta)e^{2\rho +2\zeta}\delta_{ij} \nonumber \\
     &= \delta^{kp}((\partial_j \zeta) \delta_{ip} + (\partial_i \zeta) \delta_jp - (\partial_p \zeta) \delta_{ij}) \nonumber \\
@@ -81,7 +84,7 @@ We now contract this with the spatial metric $h_{ij}$ to obtain the Ricci Scalar
 \end{align}
 
 \subsection{Final Lagrangian and Two Point Correlator}
-Integrating by parts and using the background equations of motion \cite{maldacena}(?? check with manuela and denis) we obtain the final expression for the quadratic action : 
+Integrating by parts and using the background equations of motion \cite{maldacena} we obtain the final expression for the quadratic action : 
 \begin{equation}
     S = \frac{1}{2}\int \frac{\Dot{\phi}^2}{\Dot{\rho}^2} \lbrack e^{3\rho} \Dot{\zeta}^2 -e^{\rho}(\partial \zeta)^2 \rbrack 
 \end{equation}
@@ -90,10 +93,44 @@ The euler lagrange equations of (4.14) are
 \begin{equation}
     \frac{d}{dt}(\frac{\Dot{\phi}^2}{\Dot{\rho}^2} e^{3\rho} \Dot{\zeta_{k}}) +\frac{\Dot{\phi}^2}{\Dot{\rho}^2}e^{\rho}k^2\zeta_{k} = 0
 \end{equation}
-If we were to calculate the classical solution to (4.15) then the two point correlator could be computed as \cite{maldacena}
+To quantise the perturbations we know expand $\zeta_{\Vec{k}}$ in terms of its creation and annihilation operators : 
+\begin{equation}
+    \zeta_{\Vec{k}}(t) = \zeta_{\Vec{k}}^{cl}(t)\hat{a}_{\Vec{k}}^{\dag} + \zeta_{\Vec{k}}^{cl^*}(t)\hat{a}_{-\Vec{k}} 
+\end{equation}
+Where we choose two solutions of (4.15) and demand that $\hat{a}$ and $\hat{a^{\dag}}$ obey the usual commutation relations. Each choice of solution corresponds to a different vacuum and we see there is an ambiguity in choosing the vacuum.  Thus it is quite difficult to solve (4.15) so it can be helpful to consider the case of a massless scalar field $f$ in pure deSitter space with action : 
+\begin{equation}
+    S = \frac{1}{2}\int H^{-2}\eta^{-2}((\partial_{\eta}f)^2 - (\partial f)^2 )
+\end{equation}
+This is a well studied problem and the normalised classical solution (analagous to $\zeta^{cl}$) corresponding to the standard Bunch Davies vacuum is given by \cite{birrell_davies_1982} : 
+\begin{equation}
+    f^{cl}_k = \frac{H}{\sqrt{2k^3}}(1-ik\eta)e^{-ik\eta}
+\end{equation}
+Where the Bunch Davies vavuum is the vacuum with the initial condition : 
+\begin{equation}
+    \lim_{\eta \rightarrow - \to \infty } f^{cl}_k (\eta) = H \frac{e^{-ik\eta}}{\sqrt{2k^3}}
+\end{equation}
+
+In deS space, the correlator is easily computed as : 
+\begin{align}
+    \langle f_{\Vec{k}} f_{\Vec{k'}}\rangle &= (2\pi)^3\delta(\Vec{k}+\Vec{k'})|f^{cl}_k|^2 \\ \nonumber
+    &= (2\pi)^3\delta(\Vec{k}+\Vec{k'})\frac{H^2}{2k^3}(1+k^2\eta^2) \\
+    &= (2\pi)^3\delta(\Vec{k}+\Vec{k'})\frac{H^2}{2k^3} \hspace{2mm} \text{for } k\eta << 1
+\end{align}
+ At early times, the physical wavelength ($\lamba_{physical}$ $\sim \frac{a}{k}$) is very small compared to the Hubble scale so the mode feels like it is in Minkowski space. We can estimate its behaviour there by using the WKB approx then in Minkwoski space with usual vacuum. If our slow roll paramter $\epsilon$ is small when crossing the horizon, we can estimate the late time behaviour of (4.15) by the corresponding result in deS space, with a Hubble parameter which is the value at the time of crossing. Since our action is equivalent to the deS action with a factor of $\epsilon$, we thus only then have to multiply our deS function $f$ by this $epsilon = \frac{\Dot{\phi}}{\Dot{\rho}}$ to obtain the relevant mode, i.e we can simply let $\zeta = \frac{\dot{\rho}}{\dot{\phi}}$ 
+from :
 \begin{equation}
     \langle \zeta_{\Vec{k}}(t) \zeta_{\Vec{k'}}(t)\rangle = (2\pi)^3 \delta^{3}(\Vec{k}+\Vec{k'}) |\zeta^{cl}_{k}(t)|^2
 \end{equation}
-
-
-
+ we then get for times around the Hubble crossing : 
+ \begin{equation}
+     \langle \zeta_{\Vec{k}} \zeta_{\Vec{k'}} \rangle \sim (2\pi)^3 \delta(\Vec{k}+\Vec{k'}) \frac{H^4}{M_{pl}^2 \dot{\phi}^2} \bigg|_{k=aH} 
+ \end{equation}
+ where the expression is evaluated at the horizon crossing. For late times with $H,\dot{\phi} \sim$ constant we again see that the correlation functiona and thus spectrum is constant as predicted.  
+ Lets get a small bit more physical. Since $\zeta = - \mathcal{R}$ we have $P_{\zeta} = P_{\mathcal{R}}$ so we can think in terms of the power spectrum of the spatial curvature as seen by comoving observers. An impressive verification of the inflation hypothesis was given by the Wilkinson Microwave Anisotropy Probe (WMAP) mission who produced a full–sky map of the angular variations of the CMB. If we define a dimensionless power spectrum $\Delta_{\mathcal{R}}^2(k) \equiv \frac{k^3}{2\pi^2} P_{\mathcal{R}}$ then WMAP has an explicit measurement for $\Delta_{\mathcal{R}}^2(k_0)$ \cite{Bennett:2003bz} where $k_0 = 0.05 \textit{Mpc}^{-1}$ with $\Delta_{\mathcal{R}}^2(k) = 2.95 \times 10^{-9}A$ where $0.6 \leq A \leq 1$ depending on the model. So we have that :
+ \begin{equation}
+     \Delta_{\mathcal{R}}^2(k_0) \simeq (2 - 3) \times 10^{_9}
+ \end{equation}
+So we have derived at an explicit value for the curvature perturbation scale. Given that WMAP also predicts $\epsilon < 0.08$ we can use this and our slow roll formula $H^2 =  \frac{V}{3M_{pl}^2}$ to calculate an upper bound for the energy scale for inflation with :
+\begin{equation}
+    V^{\frac{1}{4}} < 3.8 \times 10^{16} \text{Gev}
+\end{equation}
