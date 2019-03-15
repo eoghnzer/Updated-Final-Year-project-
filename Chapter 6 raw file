@@ -2,7 +2,7 @@
 \lhead{\emph{Higher Order Terms in the Einstein Hilbert Action and their Implications}}
 
 \section{Motivation}
-Einstein's Theory of Gravitation has been one of the most successful scientific theories in recent decades, however that has not quelled attempts to upgrade and modify it to address some of its limitations. Indeed the first investigation of higher order terms in the action and their effects was done only 4 years after the publication of the paper itself by Weyl (insert reference). Recent experimental observations in cosmology suggest that the Universe is composed of $\sim 76\%$(Astier et al., 2006) $\textit{Dark Energy}$ which does not obey the Strong Energy Condition. This seems to resemble a comological constant in many ways, and its dominance of both ordinary and dark matter goes some way to explain the recent findings that the universe is now in a state of $\textit{accelerated}$ expansion. The simplest model which adequately fits this data, is the $\Lambda$CDM model, supplemented with an inflationary mechanism. However this model has given rise to the $\textit{Magnitude}$ problem of the cosmological constant, the huge difference in predicted and observed values. Higher order corrections to the action are being considered to explain these observational findings in Cosmology, while they have also been used in Holography, to study strongly coupled conformal field theories. \cite{Maldacena:1997re} \cite{Witten:1998qj}. For these higher order theories to be physical, they must be equivalent to Einstein gravity in the linearised level of the vacuum, that is there should be only 1 physical mode propagated by the metric perturbations, the massless and transverse graviton. \\
+Einstein's Theory of Gravitation has been one of the most successful scientific theories in recent decades, however that has not quelled attempts to upgrade and modify it to address some of its limitations. Indeed the first investigation of higher order terms in the action and their effects was done only 4 years after the publication of the paper itself by Weyl \cite{weyl}. Recent experimental observations in cosmology suggest that the Universe is composed of $\sim 76\%$(Astier et al., 2006) $\textit{Dark Energy}$ which does not obey the Strong Energy Condition. This seems to resemble a comological constant in many ways, and its dominance of both ordinary and dark matter goes some way to explain the recent findings that the universe is now in a state of $\textit{accelerated}$ expansion. The simplest model which adequately fits this data, is the $\Lambda$CDM model, supplemented with an inflationary mechanism. However this model has given rise to the $\textit{Magnitude}$ problem of the cosmological constant, the huge difference in predicted and observed values. Higher order corrections to the action are being considered to explain these observational findings in Cosmology, while they have also been used in Holography, to study strongly coupled conformal field theories. \cite{Maldacena:1997re} \cite{Witten:1998qj}. For these higher order theories to be physical, they must be equivalent to Einstein gravity in the linearised level of the vacuum, that is there should be only 1 physical mode propagated by the metric perturbations, the massless and transverse graviton. \\
 The actions proposed by these theories should also satisfy three main criteria : i) They possess linearised second order equations around any maximally symmetric background metric, ii) they admit non hairy black hole generalisations of the Schwarzchild Black hole characterised by a single function $f(r)$ s,t, $g_{tt}g_{rr} = -1$ and whose thermodynamic properties can be investigated in an analytic manner, iii) they admits solutions of the FRW metric where the resultant equations for the scale factor $a(t)$ are second order. \\
 
 We will now investigate such theories where the corrections to the actions are composed of an infinite family of terms. The cubic case has been well studied \cite{Bueno:2016xff} as well as the non hairy black hole solutions to it \cite{Bueno:2017qce} and act as a check to which out infinite order solutions should reduce to in the limit $n=3$. As is the case in \cite{Arciniega:2018tnn} we consider an action of the form : 
@@ -58,11 +58,15 @@ Up to now we have assumed the gravitational couplings $\lambda_n$ to be free par
 \end{equation}
 Where $C$ and $D$ are constants whose value is not of interest, and in this case $\lambda_3$ is the first non vanishing coupling constant. 
 We need an asymptotically flat solution and for this to be the case we require $A=0$ but also that $\lambda_3 > 0$. Otherwise we would have an oscillating non decaying solution which is not necessarily flat in the asymptotic region. \\
-One way of satisfying these constraints is by setting the odd order couplings to zero (apart from $\lambda_3$ and the even ones to be greater than zero ; $\lambda_{2k+1} = 0, \hspace{2 mm} \lambda_{2k} > 0$ (In theory the odd couplings can be included if they are negative apart from $\lambda_3$ or are positive and small). Now consider one of the concrete models which satisfy these as proposed in \cite{Arciniega:2018tnn} : 
+One way of satisfying these constraints is by setting the odd order couplings to zero (apart from $\lambda_3$ and the even ones to be greater than zero ; $\lambda_{2k+1} = 0, \hspace{2 mm} \lambda_{2k} > 0$ (In theory the odd couplings can be included if they are negative apart from $\lambda_3$ or are positive and small). Now consider two concrete models which satisfy these as proposed in \cite{Arciniega:2018tnn} : 
 \begin{equation}
     \lambda_{2k+1} = 0, \hspace{3mm} \lambda_{4+2k} = \lambda_4 / k!
 \end{equation}
-Now consider and evaluate the sum in (6.5) : 
+and 
+\begin{equation}
+    \lambda_3 > 0, \hspace{3mm} \lambda_{n \geq 4} = (-1)^n \lambda_3 /(n-4)! 
+\end{equation}
+Now consider and evaluate the sum in (6.5) using model 1 : 
 \begin{align}
     L^{-2}\sum_{n=3}^{\infty} \lambda_n (-1)^n (LH)^{2n} &= L^{-2}(\lambda_4 (LH)^8 + \lambda_6 (LH)^{12} + \lambda_8 (LH)^{16} + \lambda_{10} (LH)^{20} + \dots \hspace{3mm}) \\ \nonumber
     &= L^{-2} (\lambda_4(LH)^{12} + \lambda_4(LH)^{12} + \frac{\lambda_4}{2!}(LH)^{16} + \frac{\lambda_4}{3!}(LH)^{20} + \dots \hspace{3mm}) \\ \nonumber
@@ -73,6 +77,120 @@ But the series inside the brackets is just the definition of the exponential fun
 so we get that 
 \begin{align}
      L^{-2}\sum_{n=3}^{\infty} \lambda_n (-1)^n (LH)^{2n} &= \lambda_4 L^6 H^8 e^{(LH)^4} \\ \nonumber
-     &\Rightarrow F(H) = H^2 + \lambda_4 L^6 H^8 e^{(LH)^4}
+     \Rightarrow F(H) &= H^2 + \lambda_4 L^6 H^8 e^{(LH)^4}
+\end{align}
+For model two we have similarly : 
+\begin{align}
+    L^{-2}\sum_{n=3}^{\infty} \lambda_n (-1)^n (LH)^{2n} &= L^{-2}(\lambda_3 (LH)^6 + \lambda_4 (LH)^8 - \lambda_5(LH)^{10} + \lambda_6(LH)^{12} + \dots \hspace{3mm} ) \\ \nonumber
+    &= L^{-2}(\lambda_3 (LH)^6 + \lambda_3(LH)^8 + \lambda_3 (LH)^{10} + \frac{\lambda_3(LH)^{12}}{2!} + \dots \hspace{3mm} ) \\ \nonumber 
+    &= -\lambda_3 L^4 H^6(1 - L^2 H^2 - L^4 H^4 - \frac{L^6 H^6}{2!} + \dots \hspace{3mm} ) \\ \nonumber
+    &= - \lambda_3 L^4 H^6(1 - L^2 H^2(1 + L^2 H^2 + \frac{L^4 H^4}{2!} \\ \nonumber
+    &= -\lambda_3 L^4 H^6(1-L^2 H^2 e^{(LH)^4} )
+\end{align}
+As regards $L^{-1}$ a convenient choice is some scale that lies below the Planck mass but large enough so that the higher order curvature terms become negligible at later times. 
+
+\section{Early Universe Cosmology}
+We can now use what we have derived to investigate early time cosmology, i.e. when the period of inflation is supposed to have occurred. We know at this time that the universe is radiation dominated so we can use this to neglect other contributions and simplify the pressure as $P = \frac{1}{3}\rho_r$. We now attempt to solve for the scale factor parametrically in terms of $F(H)$. Consider the case first where we truncate our series at some finite $n = n_{max}$ as has been the case in other papers regaarding higher order corrections. Now consider eqn (6.8) and substituting in for pressure we get :
+\begin{align}
+    \Dot{H}F'(H) = -8\pi G H(\frac{4}{3}\rho)
 \end{align}
 
+where we have neglected the underscore for radiation in pressure for convenience. 
+Subbing in for $\rho$ now using (6.3) we have 
+\begin{equation}
+    \Dot{H}F'(H) = -4H F(H)
+\end{equation}
+Now we again use $\frac{d}{dt} = \frac{dH}{dt}\frac{d}{dH} = \Dot{H}\frac{d}{dH}$ to rewrite this as : 
+\begin{align} 
+    \frac{dF}{dt} &= -4 F(H) H = 4 F\frac{\Dot{a}}{a} \\ \nonumber 
+    \frac{dF}{dt} &= -4 F \frac{da}{da}\frac{1}{a} \\ \nonumber
+    dF &= -4F \frac{da}{a}
+\end{align}
+Integrating this with respect to a parameter $p$ : 
+\begin{align}
+    \int_{F(p_0)}^{F(p)} \frac{dF}{F} &= - \int_{p_0}^{p} \frac{dp'}{p'} \\ \nonumber 
+    ln(\frac{F(p)}{F(p_0)}) &= ln(\frac{a(p_0)}{a(p)}^4) \\ \nonumber
+    \Rightarrow \frac{F(p)}{F(p_0)} &= (\frac{a(p_0)}{a(p)})^4
+\end{align}
+so we get : 
+\begin{equation}
+    a(p) = a(p_0)(\frac{F(p_0)}{F(p)})^{\frac{1}{4}}
+\end{equation}
+similarly we get 
+\begin{equation}
+    t(p) = \int_{p_0}^{p} \frac{F'(q)}{4F(q)}
+\end{equation}
+Our truncated series is dominated by our final term so we can write $F(p) \sim L^{2n_{max} -2}p^{2n_{max}}$. Computing $t(p)$ we have : 
+\begin{align}
+    t(p) &=  \int_{p_0}^{p} \frac{n_{max}}{2q^2} \\ \nonumber
+         & \sim \frac{n_{max}}{2p} \\ \nonumber
+    \Rightarrow p &\sim \frac{n_{max}}{2t}
+\end{align}
+so then we have : 
+\begin{align}
+    a(p) &\sim (F(p))^{\frac{1}{4}} \sim p^{-\frac{n_{max}}{2}} \\ \nonumber 
+    &\sim (\frac{2t}{n_{max}})^{\frac{n_{max}}{2}} \\ \nonumber
+    \Rightarrow a(t) &\sim t^{\frac{n_{max}}{2}} \hspace{2mm} \text{as t} \rightarrow 0
+\end{align}
+This means that $\frac{\Ddot{a}}{a} \sim n_{max}(n_{max} -2)/4t^2$ so that positive acceleration occurs when :
+\begin{equation}
+    \Ddot{a(t)} > 0 \hspace{2mm} \Rightarrow n_{max} > 2
+\end{equation}
+The larger the number of terms we keep, the faster the acceleration. However we can now see the error in keeping only a finite number of terms. Since we have truncated the series, the expansion is $\textit{polynomial}$ rather than exponential, so by (6.23) there exists a singularity in the past when $a=0$. This is in contradiction with predicted models of inflation which require $a= 0$ to be reached only asymptotically as $t \rightarrow \infty$. One can see that to fully deal with early time cosmology, it is necessary to keep the infinite tower of terms in order to ensure this asymptotic solution, and thus the expansion is exponential in the least. This however is fully consistent with predictions. 
+\subsection{Closed Form Behaviour as $t\rightarrow \infty$}
+Consider now a general model of the form $F(H) \sim e^{(HL)^w}$. Parametrically we had an expression for time : 
+\begin{align}
+    t(p) &= - \int_{p_0}^p \frac{F'(q)}{4qF(q)} \\ \nonumber
+    &= \int_{p_0}^p \frac{wL^w p^{w-2}}{4} \\ \nonumber
+    &\sim \frac{w}{4}\frac{L^w p^{w-1}}{w-1} \\ \nonumber
+    \Rightarrow p &\sim \big(\frac{4(w-1)t}{wL^w}\big)^{\frac{1}{w-1}}
+\end{align}
+We now sub this into the general fomrula for $F(p)$ : 
+\begin{equation}
+    F(p) \sim \text{exp}\bigg(\frac{4(w-1) t}{wL}\bigg)^{\frac{w}{w-1}}
+\end{equation}
+so that we have : 
+\begin{equation}
+    a(p) \sim \text{exp}\bigg\lbrack -\frac{1}{4}\bigg(\frac{4(1-w)t}{wL}\bigg)^{\frac{w}{w-1}} \bigg\rbrack
+\end{equation}
+for $w > 1$
+We can use this to investigate the early time behaviour for our two explicit models, and we see that : 
+\begin{align}
+    a(t) &\sim e^{-(-\frac{3t}{L})^{\frac{4}{3}}/4} \hspace{3mm} \text{(Model 1)} \\
+    a(t) &\sim e^{-\frac{t^2}{L^2}} \hspace{3mm} \text{(Model 2)}
+\end{align}
+
+Recall that in these cases we have that $t$ is negative so we have exponential growth of the scale factor at early times. This is a tremendously exciting result as rather than imposing this period of inflation, it seems to occur naturally once an infinite tower of corrections is considered. Also there is no explicit singularity as $a\rightarrow0$ is only reached asymptotically as $t \rightarrow - \infty$. 
+
+
+
+\section{Late Time Behaviour}
+To analyse the ate time behaviours of the models, it is necessary to solve the Friedmann equations numerically, and this is done rather well in \cite{Arciniega:2018tnn} whose results we will use now. The behaviour we predicted for early times using the approximation of a radiation only universe becomes apparent, that instead of Big Bang style singularity with decelerating early expansion (as predicted by Eisteins gravity) we get an early exponential growth of the scale factor which merges smoothly with the Einstein gravity prediction at sufficiently late times when the higher order corrections becomes negligible. 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth, inner]{Graphs/GeomInflationgraph1.png}
+\caption{Scale factor $a(t)$ as a function of time as predicted by the $\Lambda$DCM and model 1. The normalisation of $a(t)$ is arbitary and is normalised to its value at $t_0$ the value of $t$ at which the higher order terms become negligible}
+\label{fig:figure3}
+\end{figure}
+
+We see explicitly that the scale factor approaches 0 asymptotically, that it has exponential growth at early times and that it connects smoothly with the (experimentally) verified behaviour of $\Lambda$CDM at late times. We can see this singularity behaviour even better on a logarithmic scale : 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth, inner]{Graphs/GeomInflationgraph2.png}
+\caption{Plot of Log($\frac{a(t)}{a(t_0)}$)}
+\label{fig:figure4}
+\end{figure}
+Now the exact details depend on the explicit choice of parameters $\lamba_n$ and the energy scale $L^{-1}$ but nevertheless its clear that an inflationary epoch of exponential expansion seems unavoidable regardless of the explicit model. Also it basically identical to late time Einstein gravity as long an the new energy scale is high enough and there is a smooth exit from the geometric inflation era to the $\Lambda$ CDM era.
+\\
+We can also look at the number of e folds required to sustain inflation in these models. Traditionally $N = log(\frac{a}{a_f}$ where $a_f$ is the value of the scale factor at which inflation ends. We have then in our models : 
+\begin{equation}
+    N = \frac{1}{4}log(\frac{F(H)}{F(H_f)} ; \hspace{3mm} \epsilon = \frac{4 F(H)}{HF'(H)}
+\end{equation}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth, inner]{Graphs/GeomInflationgraph3.png}
+\caption{Plot of \epsilon against N}
+\label{fig:figure5}
+\end{figure}
+In it we can see the quasi exponential growth for $|\epsilon| \ll 1$. Note again the smooth transition to Einstein gravity at $\epsilon = 2$. From our general $F(H) \sim e^{(LH)^w}$ we get that $\epsilon \sim 1/(wN)$. These graphs show all the nice features of explicit slow roll models without the addition of any external scalar fields or potentials. 
