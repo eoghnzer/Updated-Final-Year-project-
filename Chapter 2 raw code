@@ -1,14 +1,14 @@
-\chapter{Scalar Field Perturbation}
-\lhead{\emph{Scalar Field Pertubation}}
+\chapter{Scalar Field Perturbations}
+\lhead{\emph{Scalar Field Pertubations}}
   As we have seen, inflation is an effective method of explaining the horizon problem but recent research has shown that it also offers an explanation for a more fundamental problem : that of the structure of the universe itself. Inflation provides a method of generating the fluctuations needed to generate the large scale structure of the universe as we know it today. 
-  As seen explicitly in (Mukhanov, feldman, brandenburger theory of cosmological perturbations) the structure originates from the amplification of $\textit{quantum fluctuations}$ of the scalar field during the period of inflation.
+  As seen explicitly \cite{Reference3}\cite{Reference4} the structure originates from the amplification of $\textit{quantum fluctuations}$ of the scalar field during the period of inflation. We will look at the computation of the 2 point correlation function, or correlator in two seperate ways. The first will be in an introductory manner, and will use various simplifications of computations (especially in the quantum computation) in order to gain an intuitive grasp of the subject, before discussing the topic more rigorously in the manner of Maldacena.
   
   To give a brief introduction to this mode of thought consider a perturbation of the scalar field that depends on $\textbf{both}$ position and time on a spatially flat background with perturbed metric 
   \begin{equation}
       ds^2 = (1+2\Phi)dt^2 - (1-2\Phi)d\vec{x}^2 
   \end{equation}
   where $\Phi$ is a infinitesimal function of all 4 spacetime coordinates. We can use this smallness to approximate and only work to first order in $\Phi$.
-  Our next step is to compute the perturbed Einstein equations. This is done rather well in (insert Hobson, Efstathiou and lasenby) but I will derive a part underived in the book for clarity. 
+  Our next step is to compute the perturbed Einstein equations. This is done rather well in \cite{Reference5} but I will derive a part underived in the book for clarity. 
   The connection coefficients have the form $\Gamma^{\sigma} {}_{\nu \mu} = (\Gamma_0)^{\sigma} {}_{\nu \mu} + \delta \Gamma^{\sigma} {}_{\nu \mu}$
   
   Consider $\Gamma^0 {}_{0\mu}$. Using the fact that the unperturbed connection component was already shown to be zero (1.19, 1.20) and that the metric is diagonal, we have  ; 
@@ -19,14 +19,14 @@
         = (1+2\Phi)^{-1}\partial_{\mu}\Phi 
    \end{align}
   
-  Expanding (1.59) and neglecting second order terms in $\Phi$ gives 
+  Expanding (2.2) and neglecting second order terms in $\Phi$ gives 
   \begin{equation}
       \Gamma^0 {}_{0\mu} = \partial_{\mu}\Phi
   \end{equation} as expected. 
   A similar and straight forward calculation shows the computation of the most trivial component of the perturbed stress energy tensor working again to 1st order and using the diagonality of the metric : 
   \begin{align}
-      T^0 {}_i = \partial_0\Phi \partial^{i}\Phi - g^0 {}_i(\frac{1}{2}\partial_{\sigma}\partial^{\sigma} \Phi - V(\phi)) \nonumber \\
-      = \partial_0 \Phi\partiali \Phi +\dot{\phi_0}\partial_i(\delta \phi)
+      T^0 {}_i = \partial_0\phi \partial^{i}\phi - g^0 {}_i(\frac{1}{2}\partial_{\sigma}\partial^{\sigma} \phi - V(\phi)) \nonumber \\
+      = \partial_0 \phi\partial_i \phi +\dot{\phi_0}\partial_i(\delta \phi)
   \end{align}
   
   
@@ -34,7 +34,7 @@
   \begin{equation}
       \delta T^0 {}_i = \dot{\phi_0}\partial_i(\delta \phi)
   \end{equation}
-  As detailed explicitly in (hobson estathiou and lasenby) the end result of this work is an equation that relates the perturbed scalar field $\delta\phi$ and the infinitesimal potential $\Phi$. The result is in fact two equations 
+  As detailed explicitly in \cite{Reference5} the end result of this work is an equation that relates the perturbed scalar field $\delta\phi$ and the infinitesimal potential $\Phi$. The result is in fact two equations 
   \begin{equation}
       \dot{\Phi} + H\Phi = \frac{1}{2}\dot{\phi_0}\partial_i(\delta \phi)
   \end{equation}
@@ -50,8 +50,8 @@
   
   \[ \Phi(\Vec{x}) = \frac{1}{(2\pi)^{\frac{3}{2}}} \int \Phi_{\Vec{k}} e^{(i \Vec{k} \cdot \Vec{x})} d^3\Vec{k} \]
   
-  Where $\Phi_{\Vec{k}$ and $\delta\phi_{\Vec{k}$ are the mode amplitudes of the corresponding plane wave perturbations depending solely on the comoving wave vector $\Vec{k}$. The physical wave vector is then $\frac{k}{a(t)}$ where $a(t)$ is the scale factor due to the expansion of the universe. The next logical step is to decouple the two first order equations in to a single second order equation. However there is a problem in that the variable used, although natural are not $\textit{gauge invariant}$. That is, if one transformed to a new time coordinate, we could easily consider a transformation such that the perturbation vanishes. The preferred method in cosmology is to use gauge independent variables, differing from the view taken in Classical Electrodynamics (where a gauge is fixed, often the Coulomb gauge, and the equations expressed in terms on gauge dependent variables $A_{\mu}$ etc) as where in that case it simplifies matters with less equations to solve the same is not true in this case (insert mukhanov 1992 paper). 
-  The above two equations expressed in terms of Fourier variables is easily seen to be (noting that the spatial derivative does $\textbf{not}$ correspond to multiplying by $ik$ but rather $\frac{ik}{a(t)}$ so that (1.63) and (1.64) now become 
+  Where $\Phi_{\Vec{k}}$ and $\delta\phi_{\Vec{k}}$ are the mode amplitudes of the corresponding plane wave perturbations depending solely on the comoving wave vector $\Vec{k}$. The physical wave vector is then $\frac{k}{a(t)}$ where $a(t)$ is the scale factor due to the expansion of the universe. The next logical step is to decouple the two first order equations in to a single second order equation. However there is a problem in that the variable used, although natural are not $\textit{gauge invariant}$. That is, if one transformed to a new time coordinate, we could easily consider a transformation such that the perturbation vanishes. The preferred method in cosmology is to use gauge independent variables, differing from the view taken in Classical Electrodynamics (where a gauge is fixed, often the Coulomb gauge, and the equations expressed in terms on gauge dependent variables $A_{\mu}$ etc) as where in that case it simplifies matters with less equations to solve (the homogenous equations are automatically satisfied with $A_{\mu}$ leaving only the inhomogenous) the same is not true in this case \cite{Reference4}. 
+  The above two equations expressed in terms of Fourier variables is easily seen to be (noting that the spatial derivative does $\textbf{not}$ correspond to multiplying by $ik$ but rather $\frac{ik}{a(t)}$ so that (2.6) and (2.7) now become 
   \begin{equation}
       \dot{\Phi}_{\Vec{k}} + H\Phi_{\Vec{k}} = \frac{1}{2}\dot{\phi_0}\partial_i(\delta \phi_{\Vec{k}})
   \end{equation}
@@ -65,7 +65,7 @@
       \delta f = -\dot{f}\delta t
   \end{equation}
   
-  First recall (1.63) and sub in for $\dot{\phi_0}$ using $\dot{\phi_0} = \frac{\delta \phi}{\Delta t}$ so that to first order 
+  First recall (2.6) and sub in for $\dot{\phi_0}$ using $\dot{\phi_0} = \frac{\delta \phi}{\Delta t}$ so that to first order 
   \begin{align}
       \dot{\Phi} + H\Phi = \frac{1}{2}\frac{(\delta \phi)^2}{\Delta t} 
       \approx 0 \nonumber \\
@@ -76,7 +76,7 @@
     \Delta f = (2a\dot{a}(1-2\Phi) - 2a^2 \dot{\Phi})\Delta t \nonumber \\
     = 2((a^2 H(1-2\Phi) - 2a^2\dot{\Phi})\Delta t \nonumber 
   \end{align}
-   using $a\dot{a} = a^2 H$, so that now using (1.68) it becomes
+   using $a\dot{a} = a^2 H$, so that now using (2.11) it becomes
    \begin{align}
       \Delta f = 2a^2 H(1-2\Phi)\Delta t + 4a^2H\Phi \Delta t \nonumber \\
       = 2a^2H\Delta t
@@ -92,19 +92,19 @@ Therefore $\Phi + \Delta \Phi$ is gauge invariant so the combination of
 is a gauge independent variable.
 
 \subsection{Behaviour Inside and Outside The Hubble Radius}
-To compute a spectrum of curvature perturbations, we need to know what sets the initial conditions of the perturbation $\zeta_{\Vec{k}$. Since the fluctuations are quantum in their nature, one needs to quantise the above discussed "classical" perturbations. This is discussed in detail in (mukhanov 1992 again, include other references re quantisation) but I will briefly discuss the results as given in (hobson efstathiou and lasenby) as it offers a more clear and intuitive understanding of the perturbations. 
+To compute a spectrum of curvature perturbations, we need to know what sets the initial conditions of the perturbation $\zeta_{\Vec{k}}$. Since the fluctuations are quantum in their nature, one needs to quantise the above discussed "classical" perturbations. This is discussed in detail in \cite{Reference4} \cite{birrell_davies_1982} but I will briefly discuss the results as given in \cite{Reference5} as it offers a more clear and intuitive understanding of the perturbations. The formal procedure then requires us to treat $\xi$ as a free complex scalar field and quantise it in the regular fashion. The evaluation equation turns out to be identical in both the quantum and classical case so for this part we will follow the classical evolution as it again allows a more intuitive feel for the calculations.
 
-To begin the discussion, we first switch to conformal time $\eta$ and to a new variable $\xi$ with $\xi_{\vec{k}} = \frac{a \dot{\phi_0}}{H} \zeta_{\vec{k}} $. As stated in (hobson et al) the decoupled 2nd order equation now becomes 
+To begin the discussion, we first switch to conformal time $\eta$ and to a new variable $\xi$ with $\xi_{\vec{k}} = \frac{a \dot{\phi_0}}{H} \zeta_{\vec{k}} $. As stated in \cite{Reference5} the decoupled 2nd order equation now becomes 
 \begin{equation}
     \xi_{\vec{k}}'' + (k^2 - \frac{\alpha''}{\alpha})\xi_{\vec{k}} = 0
 \end{equation}
-where $\frac{\alpha''}{\alpha}$ is the mass term dependent on derivatives of $\phi_0$ and also $a$ and $H$. To simplify the mass term we use the slow roll approximation which neglects all higher order derivative and power terms of $\phi_0$ leaving us with : 
+where $\frac{\alpha''}{\alpha}$ is the mass term dependent on derivatives of $\phi_0$ and also $a$ and $H$ and the prime denotes a derivative wrt conformal time. To simplify the mass term we use the slow roll approximation which neglects all higher order derivative and power terms of $\phi_0$ leaving us with : 
 \begin{equation}
     \xi_{\vec{k}}'' + (k^2 - 2a^2H)\xi_{\vec{k}} = 0
 \end{equation}
 
 
-This form of the equations allows us to examine the perturbations inside and outside the Hubble radius. When $k << aH \Rightarrow 1/k >> 1/aH $ (i.e. when the perturbation length scale is outside the Hubble radius) we see exponential growth in $\xi_{\vec{k}}$. If, in this case we can thus neglect k, returning to (1.72) :
+This form of the equations allows us to examine the perturbations inside and outside the Hubble radius. When $k << aH \Rightarrow 1/k >> 1/aH $ (i.e. when the perturbation length scale is outside the Hubble radius) we see exponential growth in $\xi_{\vec{k}}$. If, in this case we can thus neglect k, returning to (2.15) :
 \begin{align}
     \frac{\xi''_{\vec{k}}}{\xi_{\vec{k}}} = \frac{\alpha''}{\alpha} \nonumber \\
     \xi_{\vec{k}} \propto \alpha 
@@ -112,21 +112,21 @@ This form of the equations allows us to examine the perturbations inside and out
 But since $\xi_{\vec{k}} = \alpha \zeta_{\vec{k}}$ this means that the perturbation $\zeta_{\vec{k}}$ is a constant outside the Hubble radius! 
 On the other hand in the case where $k \gg aH \Rightarrow 1/k \ll 1/aH$ then we have 
 \begin{equation}
-    \xi''_{\vec{k}}} + k^2\xi_{\vec{k}}} \approx 0
+    \xi''_{\vec{k}} + k^2\xi_{\vec{k}} \approx 0
 \end{equation}
 which is simply oscillatory motion. This means that the curvature perturbation $\zeta_{\vec{k}}$ oscillates when inside the Hubble radius, until the comoving Hubble radius drops below $1/k$ at which point the perturbation freezes and remains constant until such point as when the comoving Hubble radius overtakes it again at a much later point in history. 
-The solution to (1.75) are trivial and given by 
+The solution to (2.18) are trivial and given by 
 \begin{equation}
     \xi_{\vec{k}} = \frac{1}{\sqrt{2k}} e^{-ik\eta}
 \end{equation}
 where the normalisation coefficient is from the quantisation normalisation condition that the conserved current of a field is unity or that the norm of a state in unity. 
 
-To achieve a full solution to (1.73) we use the result from (hobson et al) that we can write $\eta = \eta_{end} = \frac{1}{aH}$ so that (1.73) is exactly solvable with solution 
+To achieve a full solution to (2.16) we use the result from \cite{Reference5} that we can write $\eta - \eta_{end} = \frac{1}{aH}$ so that (2.16) is exactly solvable with solution 
 \begin{equation}
     \xi_{\vec{k}} = \frac{1}{\sqrt{2k^3}}\frac{i + k(\eta_{end}-\eta)}{\eta_{end} - \eta} e^{-ik\eta}
 \end{equation}
 
-Let us now examine the limit we took previously of when $k \ll aH$. Substituting the above relation so that the solution contains $aH$ we have that (1.77) becomes 
+Let us now examine the limit we took previously of when $k \ll aH$. Substituting the above relation so that the solution contains $aH$ we have that (2.20) becomes 
 \begin{align}
     \xi_{\vec{k}} &= \frac{1}{\sqrt{2k^3}}\frac{i + k(\frac{1}{aH})}{\frac{1}{aH}} e^{(-ik\eta_{end})}e^{\frac{ik}{aH}} \nonumber \\
     &= \frac{1}{\sqrt{2k^3}}(aHi + k)e^{(-ik\eta_{end})}e^{\frac{ik}{aH}} \nonumber \\
@@ -138,15 +138,15 @@ since $k \ll aH$. Then using the defintion of $\xi_{\vec{k}} = \alpha \zeta_{\ve
 \end{equation}
 And since $\frac{H^2}{\dot{\phi_0}}$ is $\approx$ constant we have again that $\zeta_{\vec{k}}$ is constant outside the Hubble radius and so also at the moment of crossing the Hubble radius itself. 
 
-\subsection{Power Spectrum}
-The definition of a power spectrum is a matter of convention. The definition given in Hobson is rather tedious and is defined as "The power spectrum of a given spatially varying field is defined as the contribution to the local variance of the field per unit logarithmic interval in k". This definition is long winded and I prefer the more intuitive definition of the power spectrum as $\textit{the Fourier transform of the correlation function}$ where the correlation function is a function that in general, describes the probability of finding a given galaxy (or cluster of mass) within a certain distance of a randomly selected galaxy. 
+\subsection{Power Spectrum and Correlators}
+The power spectrum of a given spatially varying field is generally defined as the contribution to the local variance of the field per unit logarithmic interval in k. A more intuitive definition of the power spectrum as $\textit{the Fourier transform of the correlation function}$. When trying to model the early universe we are interested in correlators as they arise naturally from the models. The $\langle \rangle$ is an ensemble average, and in inflationary cosmology becomes a Heisenberg Picture vacuum expectation value \cite{Lyth2007}. The vacuum is invariant under translations of course, and such so is the correlator for $\zeta$. Because of this, invoking the ergodic theorem \cite{Lyth2007} \cite{Liddle:2000cg} the ensemble average $\langle \zeta(\vec{x}) \zeta(\vec{x'}) \rangle$ is simply the spatial average of $\zeta$ for fixed $\vec{x}$ and $\vec{x'}$. 
 
 We will now derive the curvature spectrum $ P_{\zeta}$ of a single scalar field. From the above definitions, 
 \begin{equation}
     \langle \zeta(\vec{x})\zeta^* (\vec{x})\rangle \equiv \int^{\infty}_0  P_{\zeta}(k) d(\ln{k})
 \end{equation}
 where $\langle ... \rangle$ is the expectation value. 
-Expanding on (1.80) we have 
+Expanding on (2.23) we have 
 \begin{align}
     \langle \zeta(\vec{x})\zeta^* (\vec{x})\rangle &= \int d^3\vec{x} \zeta(\vec{x})\zeta^* (\vec{x}) \nonumber \\
     &= \frac{1}{2\pi^3}\int d^3\vec{x} d^3\vec{k} d^3\vec{k'} \zeta_{\vec{k}}\zeta_{\vec{k'}} e^{i(\vec{k}-\vec{k'})\cdot\vec{x}} 
@@ -154,26 +154,26 @@ Expanding on (1.80) we have
 
 Now using the definition of the dirac delta function and the fact that $d^3\vec{k} = 4\pi k^2 dk$ in this case :
 \begin{align}
-    \langle \zeta(\vec{x})\zeta^* (\vec{x})\rangl &= 4\pi \int^{\infty}_0 \int k^2 dk d^3\vec{k'} \zeta_{\vec{k}}\zeta_{\vec{k'}} \delta(\vec{k}-\vec{k'}) \nonumber \\
-    &= 4\pi \int^{\infty}_0 k^2 dk \lbrack \int d^3\vec{k'}\zeta_{\vec{k}}\zeta_{\vec{k'}} \rbrack \delta(\vec{k}-\vec{k'}) = \int^{\infty}_0 P_{\zeta} \frac{1}{k} dk \nonumber \\
-    &\Rightarrow 4\pi \int^{\infty}_0 k^3 \frac{\langle \zeta_{\vec{k}} \zeta^*_{\vec{k'}} \rangle }{(2\pi)^3} \delta(\vec{k}-\vec{k'}) = \int^{\infty}_0 P_{\zeta} dk
+    \langle \zeta(\vec{x})\zeta^* (\vec{x})\rangl &= 4\pi \int^{\infty}_0 \int k^2 dk d^3\vec{k'} \zeta_{\vec{k}}\zeta^{*}_{\vec{k'}} \delta(\vec{k}-\vec{k'}) \nonumber \\
+    &= 4\pi \int^{\infty}_0 k^2 dk \lbrack \int d^3\vec{k'}\zeta_{\vec{k}}\zeta^{*}_{\vec{k'}} \rbrack \delta(\vec{k}-\vec{k'}) = \int^{\infty}_0 P_{\zeta} \frac{1}{k} dk \nonumber \\
+    &\Rightarrow 4\pi \int^{\infty}_0 k^3 \frac{\langle \zeta_{\vec{k}} \zeta^*_{\vec{k'}} \rangle }{(2\pi)^3} \delta(\vec{k}-\vec{k'}) dk = \int^{\infty}_0 P_{\zeta} dk
 \end{align}
 
 where in the last two lines we used the definition of the expectation value. Now equating the integrands : 
 \begin{equation}
     \langle \zeta_{\vec{k}} \zeta^*_{\vec{k'}} \rangle = \frac{2\pi^2}{k^3} P_{\zeta}(\vec{k}) \delta(\vec{k}-\vec{k'})
 \end{equation}
-Now using (1.79) and solving for $P_{\zeta}(\vec{k})$ we have 
+Now using (2.22) and solving for $P_{\zeta}(\vec{k})$ we have 
 
 \begin{equation}
-    P_{\zeta}(\vec{k}) = (\frac{H^2}{2\pi \dot{\phi_0}})\Big\rvert_{k = aH}
+    P_{\zeta}(\vec{k}) = (\frac{H^2}{2\pi \dot{\phi_0}})^2\Big\rvert_{k = aH}
 \end{equation}
 
-Since we are working in the slow roll approximation, where $H^2$ is slowly decreasing and $\dot{phi_0}$ is roughly constant, then to first order, the power spectrum for the curvature is $\approx$ constant. This $\textit{scale invariant}$ spectrum is also known as the Zel'dovich Harrison Spectrum. If one were to be slightly more accurate, then for modes with higher k, which leave the radius later in time, would have a slightly lower spectrum since H is slowly decreasing. 
+Since we are working in the slow roll approximation, where $H^2$ is slowly decreasing and $\dot{\phi_0}$ is roughly constant, then to first order, the power spectrum for the curvature is $\approx$ constant. This $\textit{scale invariant}$ spectrum is also known as the Zel'dovich Harrison Spectrum. If one were to be slightly more accurate, then for modes with higher k, which leave the radius later in time, would have a slightly lower spectrum since H is slowly decreasing. 
 
 \subsection{Density Matter Perturbations}
 Before we proceed, it is useful to give a brief mention to density matter perturbations. To this end, we define the new variable $\mathcal{R} \equiv -\Phi\Big\rvert_{co}$. This means that $\Phi$ is to be evaluated on comoving slices, i.e. frames where the perfect fluid that makes up the universe appears to be at rest. it measures the spatial curvature of a given frame.
-Referencing (1.71), for a scalar density perturbation $\delta \rho$ the above variable, the spatial curvature of a comoving slice can be written as 
+Referencing (2.13), for a scalar density perturbation $\delta \rho$ the above variable, the spatial curvature of a comoving slice can be written as 
 \begin{equation}
     \mathcal{R = }-\zeta_{\rho} + \frac{H\delta \rho}{\dot{\rho}}
 \end{equation}
@@ -183,11 +183,11 @@ The relative components of the stress energy tensor are the $(0,ith)$ components
     \mathcal{R} = -\zeta
 \end{equation}
 
-Now we can see that the spectrum of curvature perturbations is completely equivalent to the spectrum of of gravitational fluctuations in the potential $\Phi$ which in turn can be related to the spectrum of matter density perturbations $\delta \rho$. To obtain the equivalent equations for this we need to work under the assumption, not of a scalar field but of a perfect fluid and can be seen in (insert reference re density perturbations). A short summary can be written if we invoke the fact on sub horizon (sub Hubble radius) scales the resulting equations are the same. In that case the perturbations obey the gravitational version of Poisson's equation (which makes sense since the gravitational field associated with perturbations is weak)
+Now we can see that the spectrum of curvature perturbations is completely equivalent to the spectrum of of gravitational fluctuations in the potential $\Phi$ which in turn can be related to the spectrum of matter density perturbations $\delta \rho$. To obtain the equivalent equations for this we need to work under the assumption, not of a scalar field but of a perfect fluid and can be seen in \cite{Reference3}. A short summary can be written if we invoke the fact on sub horizon (sub Hubble radius) scales the resulting equations are the same \cite{Reference5}. In that case the perturbations obey the gravitational version of Poisson's equation (which makes sense since the gravitational field associated with perturbations is weak)
 \begin{equation}
     \vec{\nabla^2}(\delta \Phi) = 4\pi G(\delta \rho)
 \end{equation}
-It is more conventional to use the fractional density fluctuation $\delta \equiv \frac{\delta \rho}{\rho_0}$ and again working in the Fourier space (1.87) becomes 
+It is more conventional to use the fractional density fluctuation $\delta \equiv \frac{\delta \rho}{\rho_0}$ and again working in the Fourier space (2.30) becomes 
 \begin{equation}
     \delta \Phi_k = -\frac{4 \pi G \rho_0 a^2}{k^2}\delta_k 
 \end{equation}
