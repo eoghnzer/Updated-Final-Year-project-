@@ -6,14 +6,14 @@ The starting point for any investigation in to primordial fluctuations is the La
     S = \frac{1}{2}\int \sqrt{g}\lbrack R - (\nabla \phi)^2 - 2V(\phi)\rbrack 
 \end{equation}
  where $R$ is the Ricci scalar in 4 dimensions and we have set the Planck Mass to 1 for convenience.
- Now the most convenient way forward is to rewrite this in terms of the ADM formalism, first proposed by (insert reference here). The reason one does this is that it is the appropriate $\textit{Hamiltonian Formlaism}$ of General Relativity. Consider the Einstein Tensor 
+ Now the most convenient way forward is to rewrite this in terms of the ADM formalism, first proposed by \cite{Reference7}. The reason one does this is that it is the appropriate $\textit{Hamiltonian Formalism}$ of General Relativity. Consider the Einstein Tensor 
  \begin{equation}
-     G_{\mu \nu} = R_{\mu \nu} - Rg_{\mu \nu}
+     G_{\mu \nu} = R_{\mu \nu} - \frac{1}{2}Rg_{\mu \nu}
  \end{equation}
  Now like any 4x4 symmetric tensor this has 10 independent components or 10 degrees of freedom. However, we do not know which ones are dynamical or (nonphysical) gauge degrees of freedom. In Classical Electrodynamics we could thus proceed with the general Hamiltonian Formalism to attempt to identify and neglect these gauge dof, however in General Relativity it is a bit more complicated. 
  
- We split our space time up in to spatial slicings of equal time parametrised by a vector field $t^{\alpha}$ with the relation $t^{\alpha}\nabla_{\alpha} t = 1$. The difficulty now arises from the fact that that these spatial slicings now have non trivial metric $h_{ij}$. Note the use of latin indices as we are working in 3D. $t^{\alpha}$ can be thought of as the flow of space time connecting spatial slices $\Sigma_{t}$ and $\Sigma_{t+dt}$.
- (insert diagram)
+ We split our space time up in to spatial slicings of equal time parametrised by a vector field $t^{\alpha}$ with the relation $t^{\alpha}\nabla_{\alpha} t = 1$. The difficulty now arises from the fact that that these spatial slicings now have non trivial metric $h_{ij}$. Note the use of Latin indices as we are working in 3D. $t^{\alpha}$ can be thought of as the flow of space time connecting spatial slices $\Sigma_{t}$ and $\Sigma_{t+dt}$.
+ 
  We would now like to rewrite the space time interval 
  \begin{equation}
      ds^2 = g_{\mu\nu}dx^{\mu}dx^{\nu}
@@ -31,7 +31,7 @@ The starting point for any investigation in to primordial fluctuations is the La
  \begin{equation}
      ds^2 = -(distance \perp \Sigma)^2 + (distance \parallel \Sigma)^2 
  \end{equation}
- (insert diagram)
+ 
  So we have 
  \begin{align}
      ds^2 &= -\mathcal{N}^2dt^2 + dl'^2 \nonumber \\
@@ -40,14 +40,14 @@ The starting point for any investigation in to primordial fluctuations is the La
  which is the space time interval in the ADM formalism. 
  The next step is to use the above result to derive the appropriate form of the action in this formalism. The correct form is given below : 
  \begin{equation}
-     S = \frac{1}{2}\int \sqrt{h}\lbrack \N R^{(3)} - 2\NV + \N^{-1}(E_{ij}E^{ij} -E^2) + \N^{-1}(\Dot{\phi} - \mathcal{N}^i\partial_i \phi)^2 - \mathcal{N}h^{ij}\partial_i \phi \partial_j \phi \rbrack 
+     S = \frac{1}{2}\int \sqrt{h}\lbrack \N R^{(3)} - 2 \N V + \N^{-1}(E_{ij}E^{ij} -E^2) + \N^{-1}(\Dot{\phi} - \mathcal{N}^i\partial_i \phi)^2 - \mathcal{N}h^{ij}\partial_i \phi \partial_j \phi \rbrack 
  \end{equation}
 Where 
 \begin{equation}
     E_{ij} = \frac{1}{2}( \Dot{h_{ij}} - \nabla_i\N_j - \nabla_j\N_i)
 \end{equation} and $E = E^{i}_ {}_i$ 
  
- To see where (2.8) came from, we must first write the volume element $\sqrt{g}$ in terms of $h$. If we expand (2.7) we can write the general form of $g_{\mu \nu}$ as : 
+ To see where (3.8) came from, we must first write the volume element $\sqrt{g}$ in terms of $h$. If we expand (3.7) we can write the general form of $g_{\mu \nu}$ as : 
  \begin{equation}
      g_{\mu \nu} = \begin{bmatrix}
      h_{ij}\mathcal{N}^i\mathcal{N}^j - \mathcal{N}^2 & h_{ij}\mathcal{N}^i \\
@@ -66,32 +66,30 @@ Where
      c & f & i \\
      \end{bmatrix}
  \end{equation}
- To calculate $det(g_{\mu \nu}) \equiv g$ we can simply use the cofactor expansion method acting on (2.9) using the form of $h_{ij}$ given in (2.10) : 
+ To calculate $det(g_{\mu \nu}) \equiv g$ we can simply use the cofactor expansion method acting on (3.9) using the form of $h_{ij}$ given in (3.10) : 
  \begin{equation}
      g = (\mathcal{N}_l \mathcal{N}^l - \mathcal{N}^2)h - \mathcal{N}_1 \ det\begin{bmatrix} \mathcal{N}_1 & b & c \\ \mathcal{N}_2 & e & f \\ \mathcal{N}_3 & f & i \\ \end{bmatrix} + \mathcal{N}_2\ det\begin{bmatrix} \N_1 & a & c \\ \N_2 & b & f \\ \N_3 & c & i \\ \end{bmatrix} - \N_3\ det \begin{bmatrix} \N_1 & a & b \\ \N_2 & b & e \\ \N_3 & c & f \\ \end{bmatrix}
  \end{equation}
- If we now write $\N_1 = h_{1l}\N^l$ we can write (2.11) as :
+ If we now write $\N_1 = h_{1l}\N^l$ we can write (3.11) as :
  \begin{equation}
      g = - \mathcal{N}^2h +  \mathcal{N}^l(\mathcal{N}_l  - h_{1l} \ det\begin{bmatrix} \mathcal{N}_1 & b & c \\ \mathcal{N}_2 & e & f \\ \mathcal{N}_3 & f & i \\ \end{bmatrix} + h_{2l}\ det\begin{bmatrix} \N_1 & a & c \\ \N_2 & b & f \\ \N_3 & c & i \\ \end{bmatrix} - h_{3l}\ det \begin{bmatrix} \N_1 & a & b \\ \N_2 & b & e \\ \N_3 & c & f \\ \end{bmatrix})
  \end{equation}
- For $l=1$ and with $h_{11} = a, h_{21}=b, h_{31}=c$ it takes a few lines of algebra to expand (2.12) to find that the term inside the bracket is $0$, so that when $l$ is summed over we get that 
+ For $l=1$ and with $h_{11} = a, h_{21}=b, h_{31}=c$ it takes a few lines of algebra to expand (3.12) to find that the term inside the bracket is $0$, so that when $l$ is summed over we get that 
  \begin{align}
      g &= -\N^2 h \nonumber \\
      \Rightarrow \sqrt{-g} &= \N\sqrt{h}
  \end{align}
- To calculate the middle term, we use results from the excellent notes of Francis Tong(insert adm reference here). Let $n^a$ be a unit vector field normal to the hypersurface $\Sigma_{t}$. The spacetime metric is related to the spatial metric by $g^{ab} = h^{ab} - n^a n^b$. 
- As stated in (tong) we can rewrite the Ricci Tensor as 
+ To calculate the middle term, we use results from the excellent notes of Francis Tong \cite{Reference7}. Let $n^a$ be a unit vector field normal to the hypersurface $\Sigma_{t}$. The spacetime metric is related to the spatial metric by $g^{ab} = h^{ab} - n^a n^b$. 
+ As stated in \cite{Reference7} we can rewrite the Ricci Tensor as 
  \begin{equation}
      R = 2(G_{ab}n^a n^b - R_{ab}n^an^b)
  \end{equation}
- Rearranging to isolate $G_{ab}n^a n^b$ and using the Gauss Codacci equation (tong) to rewrite $R$ we have :
+ Rearranging to isolate $G_{ab}n^a n^b$ and using the Gauss Codacci equation \cite{online} to rewrite $R$ we have :
  \begin{equation}
      G_{ab}n^a n^b = \frac{1}{2}\lbrack R^{(3)} - N^{-2}(E_{ab}E^{ab} - E^2) \rbrack
  \end{equation}
  
- Using this then we derive the first 3 terms of (2.8). To derive the final 2 terms we need to examine the $(\nabla \phi)^2$ term. (chat with denis to clarify).
- 
- Looking at (2.8) we see that there is no time derivative acting on $\N$ and $\N^i$ so that the dynamical variables are actually $h_{ij}$ and $\phi$. We will now derive the equations of motion for $\N$ and $\N^i$ which we now know to be \emph{constraint equations}. Firstly we can neglect the last term with spatial derivatives acting on $\phi$ since we know $\phi$ to be a function of time only. This gets rid of the spatial derivative term in $(\Dot{\phi}) -\N^i\partial_i \phi$. Therefore varying the action wrt to $\N$ gives us : 
+ Using this then we derive the first 3 terms of (3.8). To derive the final 2 terms are then derived in a similar fashion from the $(\nabla \phi)^2$ terms by subsitituting in for $\sqrt{h}$ and using $g^{ij} = h^{ij} - n^i n^j  $  again. Looking at (3.8) we see that there is no time derivative acting on $\N$ and $\N^i$ so that the dynamical variables are actually $h_{ij}$ and $\phi$. We will now derive the equations of motion for $\N$ and $\N^i$ which we now know to be \emph{constraint equations}. Firstly we can neglect the last term with spatial derivatives acting on $\phi$ since we know $\phi$ to be a function of time only. This gets rid of the spatial derivative term in $(\Dot{\phi} -\N^i\partial_i \phi)$. Therefore varying the action wrt to $\N$ gives us : 
  \begin{equation}
      R^{(3)} - 2V + \N^{-2}(E_{ij}E^{ij} - E^2) + \N^{-1}\Dot{\phi} = 0
  \end{equation}
@@ -104,11 +102,11 @@ Consider the first term $E_{lm}E^{lm} \equiv (E_{lm})^2$ so that :
 \begin{equation}
     \frac{\delta (E_{lm})^2}{\delta (\nabla_j \N^i)} = 2E_{lm}\frac{\delta( E_{lm})}{\delta(\nabla_j \N^i)}
 \end{equation}
- And recalling the definition of $E_{lm}$ in (2.9) we have 
+ And recalling the definition of $E_{lm}$ in (3.9) we have 
  \begin{equation}
      \frac{\delta (E_{lm}}{\delta (\nabla_i \N^j}) = \frac{1}{2}(-\delta^j _l \delta_{mi} - \delta^j _m \delta_{li})
  \end{equation}
- so that with (2.19) we get 
+ so that with (3.19) we get 
  \begin{equation}
      \frac{\delta (E_{lm})^2}{\delta (\nabla_j \N^i)} = -2E^i {}_j
  \end{equation}
