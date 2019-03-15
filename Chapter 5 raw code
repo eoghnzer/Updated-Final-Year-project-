@@ -1,6 +1,6 @@
 \chapter{Cubic Computation of Lagrangian}
 \lhead{\emph{Cubic Computation of Lagrangian}}
-We will now attempt to derive the cubic lagrnagian and compute the corresponding 3 point correlator. The computation is quite long and difficult, and we will draw heavily off the work of Maldacena in his groundbreaking 2003 paper \cite{maldacena}.
+If the distribution from which we draw our fluctuations $\zeta$ is $\textit{Gaussian}$ then all information about the fluctuations are conatained in the 2 point function. That is because all higher order odd point functions vanish, and all even higher order point functions can be expressed in terms of the 2 point function. However if the distribution has some non gaussianity, then we need to look at the 3 point function as it can probe significant. We will now attempt to derive the cubic lagrnagian and compute the corresponding 3 point correlator. The computation is quite long and difficult, and we will draw heavily off the work of Maldacena in his groundbreaking 2003 paper \cite{maldacena}.
 \subsection{Evolution of $\zeta , \gamma$ to all orders}
 We first attempt to show that $\zeta$ and the corresponding tensor fluctuation $\gamma$ are constant outside the horizon, not just to first order but to all orders of fields. Looking at the hamiltonian constraints, we see that it is sufficient to expand up to first order derivatives, while we assume that $N=1+\delta N$ where $\delta N$ has an expansion in derivatives starting with first order and also that $\nabla_{j}\N^i$ is first order in derivatives. Solving the Hamiltonian constraint under these conditions gives \cite{maldacena}
 \begin{equation}
@@ -23,11 +23,11 @@ Where we have integrated by parts in (5.4) since $\rho = \rho(t)$ so the term ca
 So (5.5) is a total derivative and can be neglected. Outside the horizon we can neglect all spatial derivatives. Combining this with what we have shown, that the expansion in time derivatives begins at 2nd order, we see that constant $\zeta,\gamma$ are solutions to the equations of motion to all orders in powers of $\zeta, \gamma$ outside the horizon.
 
 \subsection{Derivation of Cubic Lagrangian}
-We knwo attempt to expand the action up to 3rd order, and isolate an expression for the cubic Lagrangian. The exact derivation is an intricate and complicated one, and rather than attempt to describe it in detail, I will mainly quote the work of \cite{maldacena} and then attempt to explicitly compute the commutator. \\
+We now attempt to expand the action up to 3rd order, and isolate an expression for the cubic Lagrangian. The exact derivation is an intricate and complicated one, and rather than attempt to describe it in detail, I will mainly quote the work of \cite{maldacena} and then attempt to explicitly compute the commutator. \\
 We work in the gauge 
 \begin{align}
     \delta \phi &= 0 \hspace{3mm} \\ \nonumber
-    h_{ij} &= e^{2\rho + 2\zeta}\hat{h} \hspace{3mm} det \hat{h}=1 \hspace{3mm} \hat{h}= (\delta_{ij} + \gamma_{ij} + \frac{1}{2}\gamma_{il}\gamma_{lj} + \dots )
+    h_{ij} &= e^{2\rho + 2\zeta}\hat{h} \hspace{3mm} \text{det} \hat{h}=1 \hspace{3mm} \hat{h}= (\delta_{ij} + \gamma_{ij} + \frac{1}{2}\gamma_{il}\gamma_{lj} + \dots )
 \end{align}
 We consider the expansion of $\N$ and $\N^i$ we only have to expand up to first order. Ths is because the 3rd order terms would be multiplying the constraints evaluated at zeroth order, while the 2nd order terms would be multiplying the constraints evaluated at 1st order, which vanish by the first order constraint equations. Therefore it is necessary to only consider first order expansions of $\N$,$\N^i$. After expanding the action, and doing "a lot of integration by parts" the action becomes : 
 \begin{equation}
