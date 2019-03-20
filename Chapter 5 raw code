@@ -30,19 +30,113 @@ We work in the gauge
     h_{ij} &= e^{2\rho + 2\zeta}\hat{h} \hspace{3mm} \text{det} \hat{h}=1 \hspace{3mm} \hat{h}= (\delta_{ij} + \gamma_{ij} + \frac{1}{2}\gamma_{il}\gamma_{lj} + \dots )
 \end{align}
 We consider the expansion of $\N$ and $\N^i$ we only have to expand up to first order. Ths is because the 3rd order terms would be multiplying the constraints evaluated at zeroth order, while the 2nd order terms would be multiplying the constraints evaluated at 1st order, which vanish by the first order constraint equations. Therefore it is necessary to only consider first order expansions of $\N$,$\N^i$. After expanding the action, and doing "a lot of integration by parts" the action becomes : 
+We consider the expansion of $\N$ and $\N^i$ we only have to expand up to first order. This is because the 3rd order terms would be multiplying the constraints evaluated at zeroth order, while the 2nd order terms would be multiplying the constraints evaluated at 1st order, which vanish by the first order constraint equations. Therefore it is necessary to only consider first order expansions of $\N$,$\N^i$. After expanding the action, and doing "a lot of integration by parts" the action becomes : 
 \begin{equation}
-    S = \int \frac{1}{4}\frac{\dot{\phi}}{\dot{\rho}} \lbrack e^{3\rho}\dot{\zeta}^2 \zeta + e^{\rho}(\partial \zeta)^2\zeta \rbrack \frac{\dot{\phi}^2}{\dot{\rho}^2}e^{3\rho}\dot{\zeta}\partial_i \chi \partial_i \zeta + \dots + f(\zeta)\frac{\delta L}{\delta \zeta} |_{1} 
+    S = \int a^3\epsilon^2 \zeta 
+    \dot{\zeta}^2 - 2a\epsilon^2f(\partial \zeta)(\partial \psi) + a\epsilon^2 \zeta(\partial \zeta)^2 + \frac{1\epsilon}{2a}(\partial \zeta)(\partial \psi)(\partial^2 \psi) + \frac{\epsilon}{4a}\partial^2 \zeta(\partial \psi)^2  + 2(\zeta)\frac{\delta L_2}{\delta \zeta} |_{1} 
 \end{equation}
-where the 3 dots terms are those terms that are higher order in slow roll and so can be neglected. The final term denotes those terms proportional to the equations of motion. This can be be removed by performing a field redefinition of the form 
+where we have neglected higher order terms in slow roll. The final term denotes those terms proportional to the equations of motion, where $\frac{\delta L_2}{\delta \zeta} = (a^3\epsilon\dot{\zeta} - \epsilona\partial^2\zeta$ These terms propertional to $\delta L_2/\delta \zeta $ can be be removed by performing a field redefinition of the form 
 \begin{equation}
     \zeta = \zeta_n - f(\zeta_n)
 \end{equation}
-but be aware, this redefinition will lead to extra terms in the correlator as we will see later as it is not necessarily true that $\zeta_n$ stays constant outside the horizon as $\zeta$ did, owing to particular forms of $f(\zeta_n)$. In order to compute the 3 point function, we will make a change of variables :
+but be aware, this redefinition will lead to extra terms in the correlator as we will see later as it is not necessarily true that $\zeta_n$ stays constant outside the horizon as $\zeta$ did, owing to particular forms of $f(\zeta_n)$. Quoting (insert baumann reference) and using that the fact that we then have :
 \begin{equation}
-    \zeta = \zeta_c + \frac{\Ddot{\phi}}{\dot{\phi \dot{\rho}}}\zeta_{c}^2 + \frac{\dot{\phi}^2}{8\dot{\rho}^2}\zeta_{c}^2 + \frac{\dot{\phi}^2}{4\dot{\rho}^2}\partial^{-2}(\zeta_c \partial^2 \zeta_c) + \dots 
+    H_{int} = \int \int a^3\epsilon^2 \zeta 
+    \dot{\zeta}^2 - 2a\epsilon^2f(\partial \zeta)(\partial \psi) + a\epsilon^2 \zeta(\partial \zeta)^2 + \frac{1\epsilon}{2a}(\partial \zeta)(\partial \psi)(\partial^2 \psi) + \frac{\epsilon}{4a}\partial^2 \zeta(\partial \psi)^2 
 \end{equation}
-where again the dots indicate terms that vanish outside horizon or are higher order in slow roll. This gives a final action of :
+
+
+Now we want to compute the correlator in the limit $k\eta \ll 1$ $\langle \zeta(\Vec{k_1},0) \zeta(\Vec{k_2},0)\zeta(\Vec{k_3},0) \rangle$. To do this we we use the result in (insert baumann reference) that : 
 \begin{equation}
-    S_3 = \int \frac{\dot{\phi}^4}{\dot{\rho}^4}e^{5\rho} \dot{\rho}\dot{\zeta_c}^2\partial^{-2}\dot{\zeta_c} + \dots
+    \langle W(t) \rangle = \text{Re}\langle \Bigg[ -2i W(t)\int^{t}_{-\infty(1+i\epsilon)} dt' H_{int}(t') \Bigg]\rangle
 \end{equation}
+
+Lets consider the first term $\int d^3 x a^3\epsilon^2 \zeta 
+    \dot{\zeta}^2$ which in conformal time becomes 
+    
+\begin{equation}
+    \int d^3 x a \epsilon^2 \zeta (\zeta')^2
+\end{equation}. 
+
+So (5.11) becomes : 
+\begin{align}
+    \langle \zeta(\textbf{k}_1,0)\zeta\textbf{k}_2,0)\zeta\textbf{k}_3,0) \rangle &=  -2i \text{Re}\bigg[ \zeta(\textbf{k}_1,0)\zeta\textbf{k}_2,0)\zeta\textbf{k}_3,0) \int a d \eta' d^3x a\epsilon^2 \zeta(\textbf{x},\eta') \zeta'(\textbf{x},\eta')\zeta(\textbf{x},\eta')  \bigg] 
+\end{align}
+We know expand the fields inside the interaction Hamiltonian in terms of the their modes : 
+\begin{multline}
+    =   \text{Re}\bigg[-2i \zeta(\textbf{k}_1,0)\zeta(\textbf{k}_2,0)\zeta(\textbf{k}_3,0) \int a d \eta' \\
+    \int \int \int d^3 \textbf{q}_1 d^3 \textbf{q}_2 d^3 \textbf{q}_3 a\epsilon^2 \zeta(\textbf{q}_1,\eta') \zeta'(\textbf{q}_2,\eta')\zeta'(\textbf{q}_3,\eta') e^{-i(\textbf{q}_1 + \textbf{q}_2 + \textbf{q}_3) \textbf{x}}\bigg]
+\end{multline}
+A correlator can be thought of as an expectation value in the Interaction picture so recall Wicks' Theorem that states : 
+\begin{equation}
+    \langle 0| \zeta_1 \zeta_2 \dots \zeta_n |0\rangle = : \zeta_1 \zeta_2 \dots \zeta_n : + \text{all possible contractions} 
+\end{equation}
+where $\zeta_1 \zeta_2 \dots \zeta_n :$  is the $\textit{normal ordering}$ defined as : 
+\begin{equation}
+    : \zeta_1 \zeta_2 : = \zeta^{+}_1 \zeta^{-}_2
+\end{equation}
+and the contraction is defined as $[\zeta^{+}_1,\zeta^{-}_2] $ where we have expanded $\zeta$ in creation and annihilation operators : 
+\begin{equation}
+    \zeta(\textbf{x},t) = \int \frac{d^3k}{(2\pi)^3}(a(\textbf{k})u_{k}(t)e^{i \textbf{k}\cdot\textbf{x}} + a^{\dag}(\textbf{k})u^{*}_k (t) e^{-i \textbf{k}\cdot\textbf{x}})
+\end{equation}
+which we can rewrite as : $\zeta = \zeta^{+} + \zeta^{-}$ such that $\zeta^{+} |0\rangle = 0$. Notice that 
+\begin{align}
+    \langle 0| \zeta_1 \zeta_2 |0\rangle &= \langle 0 |(\zeta^{+}_1 + \zeta^{-}_1)(\zeta^{+}_2 + \zeta^{-}_2)|0\rangle \\ \nonumber
+    &= \langle 0| (\zeta^{+}_1 \zeta^{+}_2 + \zeta^{-}_1 \zeta^{-}_2 + \zeta^{-}_1 \zeta^{+}_2 + \zeta^{+}_1 \zeta^{-}_2 |0 \rangle 
+\end{align}
+All terms bar the final term are zero when the vacuum state is acted on them so we have : 
+\begin{equation}
+    \langle 0| \zeta^{+}_1 \zeta^{-}_2 |0 \rangle = \langle 0| \zeta_1 \zeta_2 |0\rangle = \langle 0| [\zeta^{+}_1,\zeta^{-}_2] |0\rangle 
+\end{equation} 
+where in the last line we have used again that $\zeta^{+}|0\rangle = 0$. From this we get :
+\begin{equation}
+    \langle \zeta_1 \zeta_2 \rangle = (2\pi)^3 u_{k_1} u^{*}_{k_2} \delta(\textbf{k}_1 - \textbf{k}_2)
+\end{equation}
+Contracting the modes outside of the integral with the modes inside we now have :
+\begin{multline}
+    \langle \zeta(\textbf{k}_1,0)\zeta\textbf{k}_2,0)\zeta\textbf{k}_3,0) \rangle = 2Re\Bigg[-2i u_{k_1}(0) u_{k_2}(0) u_{k_3}(0) \frac{1}{(2\pi)^9}\int \int \int d^3 \textbf{q}_1 d^3 \textbf{q}_2 d^3 \textbf{q}_3 \\
+    \int^{\eta}_{-\infty(1+i\epsilon} d\eta' a^2 \epsilon^2 
+    u^{*}_{q_1} \frac{d}{d\eta}u^{*}_{q_2} \frac{d}{d\eta}u^{*}_{q_3} \delta(\textbf{k}_1-\textbf{q}_1)\delta(\textbf{k}_2-\textbf{q}_2)\delta(\textbf{k}_3-\textbf{q}_3)e^{-i(\textbf{q}_1 + \textbf{q}_2 + \textbf{q}_3) \textbf{x}}\bigg] + 1\to 2 + 1\to3
+\end{multline}
+Computing the $k$ integrals gives then : 
+\begin{multline}
+    \langle \zeta(\textbf{k}_1,0)\zeta\textbf{k}_2,0)\zeta\textbf{k}_3,0) \rangle = 2\text{Re}\Bigg[-2i u_{k_1}(0) u_{k_2}(0) u_{k_3}(0) \\
+    \int d^3 x \int^{\eta}_{-\infty(1+i\epsilon} d\eta' a^2 \epsilon^2 
+    u^{*}_{k_1} \frac{d}{d\eta}u^{*}_{k_2} \frac{d}{d\eta}u^{*}_{k_3}e^{-i(\textbf{k}_1 + \textbf{k}_2 + \textbf{k}_3) \textbf{x}}\bigg] + 1\to 2 + 1\to3
+\end{multline}
+
+The mode functions we have computed in the 2 point correltor : 
+\begin{equation}
+    u_k (\eta) = \frac{H}{\sqrt{4\epsilon k^3}}(1-ik\eta)e^{ik\eta}
+\end{equation}
+and since we work in slow roll, we assume $\epsilon$ is slowly varying so $H \sim $constant so we have :
+\begin{equation}
+    \frac{d}{d\eta}u^{*}_k = \frac{H k^2 \eta}{\sqrt{4\epsilon k^3}}e^{-ik \eta} 
+\end{equation}
+Subbing this in and using that $\int  d^3 x e^{-i(\textbf{k}_1 + \textbf{k}_2 + \textbf{k}_3) \textbf{x}} = (2\pi)^3 \delta (\textbf{k}_1  + \textbf{k}_2 + \textbf{k}_3) $
+We have : 
+\begin{multline}
+    \langle \zeta(\textbf{k}_1,0)\zeta\textbf{k}_2,0)\zeta\textbf{k}_3,0) \rangle = 2\text{Re}\Bigg[2i \frac{H^6}{(4\epsilon)^3 (k_1 k_2 k_3)^3} a^2 \epsilon^2 \\
+    \int^{0}_{-\infty} \eta^2 (1+ik_1 \eta)(k_1k_2)^2 e^{-i(k_1 + k_2 + k_3)} (2\pi)^3 \delta(\textbf{k}_1 +\textbf{k}_2 + \textbf{k}_3)
+\end{multline}
+We can use the approximation $a \approx - \frac{1}{H \eta}$ since we are in near dS space, which when included gets rid of a factor of $H^2$ and the factor of $(a\eta)^2$. All we have left to do is compute the straightforward integral (define $k_1 + k_2 + k_3 \equiv k_t$) : 
+\begin{align}
+    \int^{0}_{-\infty}(1+ik_1 \eta)e^{-iK\eta} &= \big(\frac{i}{k_t} - \frac{k_1 \eta}{k_t} + \frac{i k_1}{\eta} \big)e^{-i k_t \eta} \big|^{0}_{\infty} \\ \nonumber
+    &= -(\frac{i}{k_t} + \frac{i k_1}{{k_t}^2} + 1\to 2 +1 \to 3)
+\end{align}
+so that the overall expression yields : 
+\begin{multline}
+    \langle \zeta(\textbf{k}_1,0)\zeta\textbf{k}_2,0)\zeta\textbf{k}_3,0) \rangle = \frac{H^4}{4 \epsilon } \frac{1}{(2 k_1 k_2 k_3)^3} (2\pi)^3 \delta(\textbf{k}_1 + \textbf{k}_2 + \textbf{k}_3) \bigg(\frac{1}{k_t} + \frac{k_1}{{k_t}^2} + 1 \to 2 + 1 \to 3 \bigg)
+\end{multline}
+
+When adding in the contributions from the other terms in $\H_{int}$ we get : 
+\begin{multline}
+    \langle \zeta(\textbf{k}_1,0)\zeta\textbf{k}_2,0)\zeta\textbf{k}_3,0) \rangle = \frac{H^4}{4 \epsilon^2 M_{pl}^4} \frac{1}{(2 k_1 k_2 k_3)^3} (2\pi)^3 \delta(\textbf{k}_1 + \textbf{k}_2 + \textbf{k}_3) \\ \bigg[\frac{\eta_{*}}{8} \sum_{i}k^{3}_i + \frac{\epsilon}{8} \bigg( \frac{8}{k_t} \sum_{i > j} k^{2}_i k^{2}_j + \sum_{i \neq j}k_i k^{2}_j - \sum_{i}k^{3}_i \bigg) \bigg]
+\end{multline}
+which is of the form :
+\begin{equation}
+    \langle \zeta_{\Vec{k}_1} \zeta_{\Vec{k}_2} \zeta_{\Vec{k}_3} \rangle \sim \frac{H^4}{M_{pl}^4} \frac{1}{\epsilon} \delta(\sum \Vec{k}_i) \mathcal{M}
+\end{equation}
+where $\mathcal{M}$ is a function of momentum as stated by Maldacena in \cite{maldacena} and where $\eta_{*}$ is the slow roll parameter we saw earlier. 
+
 
